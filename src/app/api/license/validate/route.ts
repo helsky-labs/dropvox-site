@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+function getSupabase() {
+  return createClient(
+    process.env.SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
 
 interface ValidateRequest {
   license_key: string;
@@ -15,6 +17,7 @@ interface ValidateRequest {
 }
 
 export async function POST(request: NextRequest) {
+  const supabase = getSupabase();
   try {
     const body: ValidateRequest = await request.json();
     const { license_key, machine_id, machine_name, os_version, app_version } =

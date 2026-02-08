@@ -3,12 +3,20 @@ import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-const supabase = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY!);
+}
+
+function getSupabase() {
+  return createClient(
+    process.env.SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
+
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 function generateLicenseKey(majorVersion: number = 1): string {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No I, O, 0, 1 for clarity
@@ -22,6 +30,10 @@ function generateLicenseKey(majorVersion: number = 1): string {
 }
 
 export async function POST(request: NextRequest) {
+  const stripe = getStripe();
+  const supabase = getSupabase();
+  const resend = getResend();
+
   const body = await request.text();
   const signature = request.headers.get("stripe-signature")!;
 

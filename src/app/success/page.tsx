@@ -113,13 +113,20 @@ export default function SuccessPage() {
                 Download DropVox
               </a>
               <p className="text-sm text-slate-500">
-                Need help?{" "}
-                <a
-                  href="mailto:support@dropvox.app"
+                Didn&apos;t receive your email?{" "}
+                <Link
+                  href="/restore"
                   className="text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  Contact support
-                </a>
+                  Restore your license
+                </Link>
+                {" "}&middot;{" "}
+                <Link
+                  href="/support"
+                  className="text-indigo-600 dark:text-indigo-400 hover:underline"
+                >
+                  Get help
+                </Link>
               </p>
             </div>
           </FadeIn>

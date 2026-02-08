@@ -113,5 +113,152 @@
   },
   "languageSwitcher": {
     "label": "Language"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "description": "How DropVox handles your data and privacy.",
+    "lastUpdated": "Last updated: February 2026",
+    "overview": {
+      "title": "Overview",
+      "text": "DropVox is a macOS app that transcribes audio files using on-device AI. Your privacy is fundamental to how we built this product. Audio processing happens entirely on your Mac — no audio data is ever sent to our servers or any third party."
+    },
+    "audioProcessing": {
+      "title": "Audio Processing",
+      "text": "All transcription is performed locally on your Mac using WhisperKit, an optimized implementation of OpenAI's Whisper model for Apple Silicon.",
+      "items": {
+        "noUpload": "Your audio files are never uploaded to any server",
+        "noStorage": "No audio data is stored beyond your local machine",
+        "noAccess": "We have no ability to access your audio files or transcriptions"
+      }
+    },
+    "dataCollected": {
+      "title": "Data We Collect",
+      "purchase": {
+        "title": "At Purchase",
+        "text": "When you purchase a DropVox Pro license, we collect your email address (provided to Stripe during checkout). This is used solely to deliver your license key and for purchase-related communication."
+      },
+      "license": {
+        "title": "License Activation",
+        "text": "When you activate a license, your machine ID (a hardware identifier) is sent to our server to manage device activations. Each license supports up to 3 machines. We also receive your app version and OS version for compatibility checks."
+      },
+      "telemetry": {
+        "title": "Anonymous Telemetry (Opt-Out)",
+        "text": "DropVox includes optional, anonymous telemetry via TelemetryDeck to help us improve the app.",
+        "items": {
+          "events": "Events tracked: app launches, transcription start/complete/fail, model downloads",
+          "noPersonal": "No personal information, audio content, or transcription text is ever included",
+          "optOut": "You can disable telemetry in Settings > General > \"Help Improve DropVox\""
+        }
+      }
+    },
+    "thirdParties": {
+      "title": "Third-Party Services",
+      "stripe": "Payment processing. Handles credit card information securely. We never see or store your card details.",
+      "resend": "Transactional email delivery. Used to send license keys and restore emails.",
+      "supabase": "Database hosting. Stores license records (key, email, machine activations).",
+      "telemetrydeck": "Privacy-focused analytics. Collects anonymous usage signals with no personal identifiers."
+    },
+    "noTracking": {
+      "title": "No Tracking",
+      "text": "DropVox does not use tracking cookies, advertising networks, or any form of cross-site tracking. The website uses privacy-focused analytics that do not track individual users."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "text": "License records are retained as long as your license is active. If you request deletion, we will remove your data within 30 days. Telemetry data is automatically aggregated and anonymized."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "If you have questions about this privacy policy or want to request data deletion, contact us at"
+    }
+  },
+  "supportPage": {
+    "title": "Support",
+    "description": "Get help with DropVox.",
+    "subtitle": "Need help? We're here for you.",
+    "contact": {
+      "email": {
+        "title": "Email Support"
+      },
+      "github": {
+        "title": "Report a Bug",
+        "description": "Open an issue on GitHub"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "common": {
+        "title": "Common Issues",
+        "modelDownload": {
+          "q": "The model download is stuck or failing",
+          "a": "Ensure you have a stable internet connection. Models range from 75MB to 3GB. Try a smaller model first (Tiny or Base). If the download fails, restart DropVox and try again — it will resume where it left off."
+        },
+        "accuracy": {
+          "q": "The transcription isn't accurate",
+          "a": "Try a larger model for better accuracy. The Small or Medium models work well for most audio. Also ensure the correct language is selected — or use Auto-Detect. Clear audio with minimal background noise gives the best results."
+        },
+        "formats": {
+          "q": "What audio formats are supported?",
+          "a": "DropVox supports .opus (WhatsApp default), .mp3, .m4a, and .wav files. If your file isn't recognized, try converting it to one of these formats."
+        },
+        "offline": {
+          "q": "Does DropVox work offline?",
+          "a": "Yes! After downloading a Whisper model, all transcription happens locally on your Mac with no internet required. Internet is only needed for the initial model download and license activation."
+        }
+      },
+      "license": {
+        "title": "License & Billing",
+        "free": {
+          "q": "What's included in the free tier?",
+          "a": "The free tier includes 3 transcriptions per day with a maximum duration of 60 seconds per file. Upgrade to Pro for unlimited transcriptions with no duration limits."
+        },
+        "activate": {
+          "q": "How do I activate my license?",
+          "a": "Open DropVox, go to Settings > License, paste your license key, and click Activate. Your key was sent to the email you used at checkout."
+        },
+        "machines": {
+          "q": "How many machines can I use?",
+          "a": "Each DropVox Pro license can be activated on up to 3 machines. If you need to move your license to a new machine, contact support."
+        },
+        "lost": {
+          "q": "I lost my license key",
+          "a": "Visit the Restore License page and enter the email you used during purchase. We'll send your license key(s) to that email."
+        }
+      },
+      "technical": {
+        "title": "Technical",
+        "requirements": {
+          "q": "What are the system requirements?",
+          "a": "DropVox requires macOS 14 (Sonoma) or later and an Apple Silicon Mac (M1 or newer). Intel Macs are not supported."
+        },
+        "storage": {
+          "q": "How much storage do the models use?",
+          "a": "Models range from ~75MB (Tiny) to ~3GB (Large). You only download the model you choose. Models are stored in ~/Library/Caches/ and can be deleted anytime."
+        },
+        "privacy": {
+          "q": "Is my audio sent to the cloud?",
+          "a": "No. All transcription happens locally on your Mac using WhisperKit. Your audio files never leave your device. See our Privacy Policy for full details."
+        }
+      }
+    },
+    "restore": {
+      "title": "Lost your license key?",
+      "text": "Enter the email you used at checkout and we'll send your license key(s).",
+      "button": "Restore License"
+    }
+  },
+  "restorePage": {
+    "title": "Restore License",
+    "subtitle": "Enter the email you used when purchasing DropVox Pro.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send License Key",
+    "submitting": "Sending...",
+    "error": "Something went wrong. Please try again or contact support@dropvox.app.",
+    "hint": "If a license is found, we'll send the key to your email. For security, we won't confirm whether an account exists.",
+    "success": {
+      "title": "Check your email",
+      "text": "If we found a license associated with that email, we've sent the key(s) to your inbox. Check your spam folder if you don't see it within a few minutes.",
+      "backHome": "Back to home"
+    }
   }
 }

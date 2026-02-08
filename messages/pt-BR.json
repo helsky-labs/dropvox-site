@@ -113,5 +113,152 @@
   },
   "languageSwitcher": {
     "label": "Idioma"
+  },
+  "privacyPage": {
+    "title": "Politica de Privacidade",
+    "description": "Como o DropVox lida com seus dados e privacidade.",
+    "lastUpdated": "Ultima atualizacao: Fevereiro de 2026",
+    "overview": {
+      "title": "Visao Geral",
+      "text": "DropVox e um app para macOS que transcreve arquivos de audio usando IA local. Sua privacidade e fundamental para como construimos este produto. O processamento de audio acontece totalmente no seu Mac — nenhum dado de audio e enviado para nossos servidores ou terceiros."
+    },
+    "audioProcessing": {
+      "title": "Processamento de Audio",
+      "text": "Toda transcricao e realizada localmente no seu Mac usando WhisperKit, uma implementacao otimizada do modelo Whisper da OpenAI para Apple Silicon.",
+      "items": {
+        "noUpload": "Seus arquivos de audio nunca sao enviados para nenhum servidor",
+        "noStorage": "Nenhum dado de audio e armazenado alem da sua maquina local",
+        "noAccess": "Nao temos capacidade de acessar seus arquivos de audio ou transcricoes"
+      }
+    },
+    "dataCollected": {
+      "title": "Dados que Coletamos",
+      "purchase": {
+        "title": "Na Compra",
+        "text": "Quando voce compra uma licenca DropVox Pro, coletamos seu endereco de email (fornecido ao Stripe durante o checkout). Isso e usado exclusivamente para entregar sua chave de licenca e comunicacoes relacionadas a compra."
+      },
+      "license": {
+        "title": "Ativacao de Licenca",
+        "text": "Quando voce ativa uma licenca, o ID da sua maquina (um identificador de hardware) e enviado ao nosso servidor para gerenciar ativacoes de dispositivos. Cada licenca suporta ate 3 maquinas. Tambem recebemos a versao do app e versao do SO para verificacoes de compatibilidade."
+      },
+      "telemetry": {
+        "title": "Telemetria Anonima (Desativavel)",
+        "text": "DropVox inclui telemetria anonima opcional via TelemetryDeck para nos ajudar a melhorar o app.",
+        "items": {
+          "events": "Eventos rastreados: inicializacoes do app, inicio/conclusao/falha de transcricao, downloads de modelos",
+          "noPersonal": "Nenhuma informacao pessoal, conteudo de audio ou texto de transcricao e incluido",
+          "optOut": "Voce pode desativar a telemetria em Configuracoes > Geral > \"Ajudar a Melhorar o DropVox\""
+        }
+      }
+    },
+    "thirdParties": {
+      "title": "Servicos de Terceiros",
+      "stripe": "Processamento de pagamentos. Lida com informacoes de cartao de credito de forma segura. Nunca vemos ou armazenamos seus dados de cartao.",
+      "resend": "Entrega de emails transacionais. Usado para enviar chaves de licenca e emails de restauracao.",
+      "supabase": "Hospedagem de banco de dados. Armazena registros de licenca (chave, email, ativacoes de maquina).",
+      "telemetrydeck": "Analiticos focados em privacidade. Coleta sinais de uso anonimos sem identificadores pessoais."
+    },
+    "noTracking": {
+      "title": "Sem Rastreamento",
+      "text": "DropVox nao usa cookies de rastreamento, redes de publicidade ou qualquer forma de rastreamento entre sites. O site usa analiticos focados em privacidade que nao rastreiam usuarios individuais."
+    },
+    "retention": {
+      "title": "Retencao de Dados",
+      "text": "Registros de licenca sao mantidos enquanto sua licenca estiver ativa. Se voce solicitar a exclusao, removeremos seus dados dentro de 30 dias. Dados de telemetria sao automaticamente agregados e anonimizados."
+    },
+    "contact": {
+      "title": "Contato",
+      "text": "Se voce tiver perguntas sobre esta politica de privacidade ou quiser solicitar a exclusao de dados, entre em contato conosco em"
+    }
+  },
+  "supportPage": {
+    "title": "Suporte",
+    "description": "Obtenha ajuda com o DropVox.",
+    "subtitle": "Precisa de ajuda? Estamos aqui para voce.",
+    "contact": {
+      "email": {
+        "title": "Suporte por Email"
+      },
+      "github": {
+        "title": "Reportar um Bug",
+        "description": "Abra uma issue no GitHub"
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "common": {
+        "title": "Problemas Comuns",
+        "modelDownload": {
+          "q": "O download do modelo esta travado ou falhando",
+          "a": "Certifique-se de ter uma conexao de internet estavel. Os modelos variam de 75MB a 3GB. Tente um modelo menor primeiro (Tiny ou Base). Se o download falhar, reinicie o DropVox e tente novamente — ele retomara de onde parou."
+        },
+        "accuracy": {
+          "q": "A transcricao nao esta precisa",
+          "a": "Tente um modelo maior para melhor precisao. Os modelos Small ou Medium funcionam bem para a maioria dos audios. Tambem certifique-se de que o idioma correto esta selecionado — ou use a Deteccao Automatica. Audio claro com minimo de ruido de fundo da os melhores resultados."
+        },
+        "formats": {
+          "q": "Quais formatos de audio sao suportados?",
+          "a": "DropVox suporta .opus (padrao do WhatsApp), .mp3, .m4a e .wav. Se seu arquivo nao for reconhecido, tente converte-lo para um desses formatos."
+        },
+        "offline": {
+          "q": "O DropVox funciona offline?",
+          "a": "Sim! Apos baixar um modelo Whisper, toda transcricao acontece localmente no seu Mac sem necessidade de internet. Internet so e necessaria para o download inicial do modelo e ativacao de licenca."
+        }
+      },
+      "license": {
+        "title": "Licenca e Cobranca",
+        "free": {
+          "q": "O que esta incluido no plano gratuito?",
+          "a": "O plano gratuito inclui 3 transcricoes por dia com duracao maxima de 60 segundos por arquivo. Atualize para Pro para transcricoes ilimitadas sem limites de duracao."
+        },
+        "activate": {
+          "q": "Como ativo minha licenca?",
+          "a": "Abra o DropVox, va em Configuracoes > Licenca, cole sua chave de licenca e clique em Ativar. Sua chave foi enviada para o email usado no checkout."
+        },
+        "machines": {
+          "q": "Em quantas maquinas posso usar?",
+          "a": "Cada licenca DropVox Pro pode ser ativada em ate 3 maquinas. Se precisar mover sua licenca para uma nova maquina, entre em contato com o suporte."
+        },
+        "lost": {
+          "q": "Perdi minha chave de licenca",
+          "a": "Visite a pagina de Restaurar Licenca e insira o email que usou na compra. Enviaremos sua(s) chave(s) de licenca para esse email."
+        }
+      },
+      "technical": {
+        "title": "Tecnico",
+        "requirements": {
+          "q": "Quais sao os requisitos do sistema?",
+          "a": "DropVox requer macOS 14 (Sonoma) ou posterior e um Mac com Apple Silicon (M1 ou mais recente). Macs Intel nao sao suportados."
+        },
+        "storage": {
+          "q": "Quanto espaco os modelos ocupam?",
+          "a": "Os modelos variam de ~75MB (Tiny) a ~3GB (Large). Voce so baixa o modelo que escolher. Os modelos sao armazenados em ~/Library/Caches/ e podem ser excluidos a qualquer momento."
+        },
+        "privacy": {
+          "q": "Meu audio e enviado para a nuvem?",
+          "a": "Nao. Toda transcricao acontece localmente no seu Mac usando WhisperKit. Seus arquivos de audio nunca saem do seu dispositivo. Veja nossa Politica de Privacidade para detalhes completos."
+        }
+      }
+    },
+    "restore": {
+      "title": "Perdeu sua chave de licenca?",
+      "text": "Insira o email que usou no checkout e enviaremos sua(s) chave(s) de licenca.",
+      "button": "Restaurar Licenca"
+    }
+  },
+  "restorePage": {
+    "title": "Restaurar Licenca",
+    "subtitle": "Insira o email que voce usou ao comprar o DropVox Pro.",
+    "emailLabel": "Endereco de email",
+    "emailPlaceholder": "voce@exemplo.com",
+    "submit": "Enviar Chave de Licenca",
+    "submitting": "Enviando...",
+    "error": "Algo deu errado. Tente novamente ou entre em contato com support@dropvox.app.",
+    "hint": "Se uma licenca for encontrada, enviaremos a chave para seu email. Por seguranca, nao confirmamos se uma conta existe.",
+    "success": {
+      "title": "Verifique seu email",
+      "text": "Se encontramos uma licenca associada a esse email, enviamos a(s) chave(s) para sua caixa de entrada. Verifique sua pasta de spam se nao ver em alguns minutos.",
+      "backHome": "Voltar para inicio"
+    }
   }
 }
