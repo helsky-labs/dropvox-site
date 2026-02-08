@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-export function CheckoutButton() {
+interface CheckoutButtonProps {
+  locale?: string;
+}
+
+export function CheckoutButton({ locale }: CheckoutButtonProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,7 +20,7 @@ export function CheckoutButton() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({}),
+        body: JSON.stringify({ locale }),
       });
 
       const data = await response.json();

@@ -5,16 +5,23 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
 }
 
+function getPriceId(locale?: string): string {
+  if (locale === "pt-BR") {
+    return process.env.STRIPE_DROPVOX_PRICE_ID_BRL || process.env.STRIPE_DROPVOX_PRICE_ID!;
+  }
+  return process.env.STRIPE_DROPVOX_PRICE_ID_USD || process.env.STRIPE_DROPVOX_PRICE_ID!;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const stripe = getStripe();
-    const { email } = await request.json();
+    const { email, locale } = await request.json();
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
         {
-          price: process.env.STRIPE_DROPVOX_PRICE_ID!,
+          price: getPriceId(locale),
           quantity: 1,
         },
       ],

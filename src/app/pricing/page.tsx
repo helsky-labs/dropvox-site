@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
+import { getLocale } from "next-intl/server";
 
 function CheckIcon() {
   return (
@@ -40,7 +41,11 @@ function XIcon() {
   );
 }
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const locale = await getLocale();
+  const isBR = locale === "pt-BR";
+  const proPrice = isBR ? "R$49,90" : "$9.99";
+  const proPriceLabel = isBR ? "pagamento unico" : "one-time";
   const freeFeatures = [
     { text: "3 transcriptions per day", included: true },
     { text: "60 second max audio", included: true },
@@ -214,11 +219,11 @@ export default function PricingPage() {
                 </p>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-slate-900 dark:text-white">
-                    $12.99
+                    {proPrice}
                   </span>
-                  <span className="text-slate-500 ml-2">one-time</span>
+                  <span className="text-slate-500 ml-2">{proPriceLabel}</span>
                 </div>
-                <CheckoutButton />
+                <CheckoutButton locale={locale} />
                 <ul className="space-y-4">
                   {proFeatures.map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">

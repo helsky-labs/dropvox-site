@@ -8,11 +8,26 @@ export function JsonLd() {
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "macOS 14.0 (Sonoma) or later",
     processorRequirements: "Apple Silicon (M1, M2, M3, or later)",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
+    offers: [
+      {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        name: "Free",
+      },
+      {
+        "@type": "Offer",
+        price: "9.99",
+        priceCurrency: "USD",
+        name: "Pro",
+      },
+      {
+        "@type": "Offer",
+        price: "49.90",
+        priceCurrency: "BRL",
+        name: "Pro",
+      },
+    ],
     description:
       "Native macOS app for transcribing WhatsApp voice messages and audio files using WhisperKit AI. Features full app window, menu bar access, floating drop zone, and history browser. 100% private and offline.",
     softwareVersion: "1.0.0",
