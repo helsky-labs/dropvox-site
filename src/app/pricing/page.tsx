@@ -44,7 +44,7 @@ function XIcon() {
 export default async function PricingPage() {
   const locale = await getLocale();
   const isBR = locale === "pt-BR";
-  const proPrice = isBR ? "R$49,90" : "$9.99";
+  const proPrice = isBR ? "R$49,00" : "$9.99";
   const proPriceLabel = isBR ? "pagamento unico" : "one-time";
   const freeFeatures = [
     { text: "3 transcriptions per day", included: true },

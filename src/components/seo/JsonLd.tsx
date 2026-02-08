@@ -23,7 +23,7 @@ export function JsonLd() {
       },
       {
         "@type": "Offer",
-        price: "49.90",
+        price: "49.00",
         priceCurrency: "BRL",
         name: "Pro",
       },
