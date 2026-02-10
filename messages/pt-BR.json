@@ -260,5 +260,88 @@
       "text": "Se encontramos uma licença associada a esse email, enviamos a(s) chave(s) para sua caixa de entrada. Verifique sua pasta de spam se não ver em alguns minutos.",
       "backHome": "Voltar para início"
     }
+  },
+  "pricingPage": {
+    "title": "Preços",
+    "description": "Escolha o plano ideal para suas transcrições com DropVox",
+    "ogTitle": "Preços - DropVox",
+    "hero": {
+      "titleStart": "Preços ",
+      "titleHighlight": "transparentes",
+      "titleEnd": " e simples",
+      "subtitle": "Comece grátis com 3 transcrições por dia. Atualize para Pro para transcrições ilimitadas e arquivos de áudio mais longos.",
+      "requirements": "Requer macOS 14+ (Sonoma) e Apple Silicon (M1/M2/M3)"
+    },
+    "free": {
+      "name": "Gratuito",
+      "description": "Perfeito para experimentar o DropVox",
+      "priceLabel": "para sempre",
+      "downloadButton": "Baixar Grátis",
+      "feature1": "3 transcrições por dia",
+      "feature2": "Áudio de até 60 segundos",
+      "feature3": "Modelo Whisper Base (145MB)",
+      "feature4": "13 idiomas",
+      "feature5": "Janela completa e menu bar",
+      "feature6": "Arquivos de áudio mais longos",
+      "feature7": "Transcrições ilimitadas",
+      "feature8": "Todos os 5 modelos Whisper"
+    },
+    "pro": {
+      "name": "Pro",
+      "badge": "Mais Popular",
+      "description": "Para usuários avançados que precisam de mais",
+      "priceLabel": "pagamento único",
+      "checkoutButton": "Comprar Licença Pro",
+      "checkoutLoading": "Carregando...",
+      "feature1": "Transcrições ilimitadas",
+      "feature2": "Sem limite de duração de áudio",
+      "feature3": "Todos os 5 modelos Whisper (75MB-3GB)",
+      "feature4": "13 idiomas",
+      "feature5": "Janela completa e menu bar",
+      "feature6": "Suporte prioritário",
+      "feature7": "Use em 3 máquinas"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": {
+        "question": "Quais são os requisitos do sistema?",
+        "answer": "DropVox requer macOS 14 (Sonoma) ou posterior e um Mac com Apple Silicon (M1, M2, M3 ou posterior). WhisperKit é otimizado especificamente para o Neural Engine da Apple, então Macs Intel não são suportados."
+      },
+      "q2": {
+        "question": "Por que não funciona em Macs Intel?",
+        "answer": "DropVox usa WhisperKit, a implementação otimizada da Apple do Whisper AI. WhisperKit aproveita o Neural Engine nos chips Apple Silicon para transcrição rápida e eficiente. Macs Intel não possuem esse hardware."
+      },
+      "q3": {
+        "question": "Como funciona a licença?",
+        "answer": "Sua licença é uma compra única válida para o DropVox v1.x. Você pode usá-la em até 3 máquinas. Quando a v2 for lançada com novos recursos importantes, você terá a opção de atualizar."
+      },
+      "q4": {
+        "question": "Qual a diferença entre os modelos Whisper?",
+        "answer": "DropVox oferece 5 modelos: Tiny (75MB, mais rápido), Base (145MB, rápido), Small (470MB, equilibrado), Medium (1.5GB, preciso) e Large (3GB, mais preciso). Modelos maiores são mais lentos mas mais precisos. O plano gratuito usa o Base; o Pro desbloqueia todos os modelos."
+      },
+      "q5": {
+        "question": "Quais métodos de pagamento são aceitos?",
+        "answer": "Aceitamos todos os principais cartões de crédito através do Stripe. Suas informações de pagamento nunca são armazenadas em nossos servidores."
+      },
+      "q6": {
+        "question": "Posso obter reembolso?",
+        "answer": "Sim, oferecemos garantia de reembolso de 14 dias. Se você não estiver satisfeito, entre em contato conosco para um reembolso total."
+      },
+      "q7": {
+        "question": "O que acontece com minhas transcrições?",
+        "answer": "Todas as transcrições acontecem localmente no seu Mac usando WhisperKit AI. Seu áudio nunca sai do seu computador — não temos acesso aos seus dados. O histórico é armazenado localmente e pode ser limpo a qualquer momento."
+      },
+      "q8": {
+        "question": "Preciso de conexão com a internet?",
+        "answer": "Internet só é necessária para baixar o modelo de IA inicialmente e para validar sua licença ocasionalmente. A transcrição em si funciona completamente offline."
+      }
+    },
+    "footer": {
+      "builtBy": "Feito por",
+      "home": "Início",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "support": "Suporte"
+    }
   }
 }

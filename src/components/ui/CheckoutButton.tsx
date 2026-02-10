@@ -4,9 +4,11 @@ import { useState } from "react";
 
 interface CheckoutButtonProps {
   locale?: string;
+  label?: string;
+  loadingLabel?: string;
 }
 
-export function CheckoutButton({ locale }: CheckoutButtonProps) {
+export function CheckoutButton({ locale, label, loadingLabel }: CheckoutButtonProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -44,7 +46,7 @@ export function CheckoutButton({ locale }: CheckoutButtonProps) {
         disabled={loading}
         className="block w-full text-center py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold transition-colors"
       >
-        {loading ? "Loading..." : "Get Pro License"}
+        {loading ? (loadingLabel || "Loading...") : (label || "Get Pro License")}
       </button>
       {error && (
         <p className="mt-2 text-sm text-red-500 text-center">{error}</p>

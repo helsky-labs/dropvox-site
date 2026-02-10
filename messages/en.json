@@ -260,5 +260,88 @@
       "text": "If we found a license associated with that email, we've sent the key(s) to your inbox. Check your spam folder if you don't see it within a few minutes.",
       "backHome": "Back to home"
     }
+  },
+  "pricingPage": {
+    "title": "Pricing",
+    "description": "Choose the right plan for your transcriptions with DropVox",
+    "ogTitle": "Pricing - DropVox",
+    "hero": {
+      "titleStart": "Simple, ",
+      "titleHighlight": "transparent",
+      "titleEnd": " pricing",
+      "subtitle": "Start free with 3 transcriptions per day. Upgrade to Pro for unlimited transcriptions and longer audio files.",
+      "requirements": "Requires macOS 14+ (Sonoma) and Apple Silicon (M1/M2/M3)"
+    },
+    "free": {
+      "name": "Free",
+      "description": "Perfect for trying out DropVox",
+      "priceLabel": "forever",
+      "downloadButton": "Download Free",
+      "feature1": "3 transcriptions per day",
+      "feature2": "60 second max audio",
+      "feature3": "Base Whisper model (145MB)",
+      "feature4": "13 languages",
+      "feature5": "Full app window & menu bar",
+      "feature6": "Longer audio files",
+      "feature7": "Unlimited transcriptions",
+      "feature8": "All 5 Whisper models"
+    },
+    "pro": {
+      "name": "Pro",
+      "badge": "Most Popular",
+      "description": "For power users who need more",
+      "priceLabel": "one-time",
+      "checkoutButton": "Get Pro License",
+      "checkoutLoading": "Loading...",
+      "feature1": "Unlimited transcriptions",
+      "feature2": "No audio length limit",
+      "feature3": "All 5 Whisper models (75MB-3GB)",
+      "feature4": "13 languages",
+      "feature5": "Full app window & menu bar",
+      "feature6": "Priority support",
+      "feature7": "Use on 3 machines"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What are the system requirements?",
+        "answer": "DropVox requires macOS 14 (Sonoma) or later and an Apple Silicon Mac (M1, M2, M3, or later). WhisperKit is optimized specifically for Apple's Neural Engine, so Intel Macs are not supported."
+      },
+      "q2": {
+        "question": "Why doesn't it work on Intel Macs?",
+        "answer": "DropVox uses WhisperKit, Apple's optimized implementation of Whisper AI. WhisperKit leverages the Neural Engine in Apple Silicon chips for fast, efficient transcription. Intel Macs don't have this hardware."
+      },
+      "q3": {
+        "question": "How does the license work?",
+        "answer": "Your license is a one-time purchase valid for DropVox v1.x. You can use it on up to 3 machines. When v2 releases with major new features, you'll have the option to upgrade."
+      },
+      "q4": {
+        "question": "What's the difference between the Whisper models?",
+        "answer": "DropVox offers 5 models: Tiny (75MB, fastest), Base (145MB, fast), Small (470MB, balanced), Medium (1.5GB, accurate), and Large (3GB, most accurate). Larger models are slower but more accurate. Free tier uses Base; Pro unlocks all models."
+      },
+      "q5": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards through Stripe. Your payment information is never stored on our servers."
+      },
+      "q6": {
+        "question": "Can I get a refund?",
+        "answer": "Yes, we offer a 14-day money-back guarantee. If you're not satisfied, contact us for a full refund."
+      },
+      "q7": {
+        "question": "What happens to my transcriptions?",
+        "answer": "All transcriptions happen locally on your Mac using WhisperKit AI. Your audio never leaves your computer - we have no access to your data. History is stored locally and can be cleared anytime."
+      },
+      "q8": {
+        "question": "Do I need an internet connection?",
+        "answer": "Internet is only needed to download the AI model initially and to validate your license occasionally. Transcription itself works completely offline."
+      }
+    },
+    "footer": {
+      "builtBy": "Built by",
+      "home": "Home",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "support": "Support"
+    }
   }
 }

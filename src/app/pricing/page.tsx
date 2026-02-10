@@ -3,23 +3,18 @@ import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
-  const isBR = locale === "pt-BR";
+  const t = await getTranslations("pricingPage");
 
   return {
-    title: isBR ? "Precos" : "Pricing",
-    description: isBR
-      ? "Escolha o plano ideal para suas transcricoes com DropVox"
-      : "Choose the right plan for your transcriptions with DropVox",
+    title: t("title"),
+    description: t("description"),
     openGraph: {
-      title: isBR ? "Precos - DropVox" : "Pricing - DropVox",
-      description: isBR
-        ? "Escolha o plano ideal para suas transcricoes com DropVox"
-        : "Choose the right plan for your transcriptions with DropVox",
+      title: t("ogTitle"),
+      description: t("description"),
     },
   };
 }
@@ -62,72 +57,37 @@ function XIcon() {
 
 export default async function PricingPage() {
   const locale = await getLocale();
+  const t = await getTranslations("pricingPage");
   const isBR = locale === "pt-BR";
   const proPrice = isBR ? "R$49,90" : "$9.99";
-  const proPriceLabel = isBR ? "pagamento unico" : "one-time";
+  const freePrice = isBR ? "R$0" : "$0";
+
   const freeFeatures = [
-    { text: "3 transcriptions per day", included: true },
-    { text: "60 second max audio", included: true },
-    { text: "Base Whisper model (145MB)", included: true },
-    { text: "13 languages", included: true },
-    { text: "Full app window & menu bar", included: true },
-    { text: "Longer audio files", included: false },
-    { text: "Unlimited transcriptions", included: false },
-    { text: "All 5 Whisper models", included: false },
+    { text: t("free.feature1"), included: true },
+    { text: t("free.feature2"), included: true },
+    { text: t("free.feature3"), included: true },
+    { text: t("free.feature4"), included: true },
+    { text: t("free.feature5"), included: true },
+    { text: t("free.feature6"), included: false },
+    { text: t("free.feature7"), included: false },
+    { text: t("free.feature8"), included: false },
   ];
 
   const proFeatures = [
-    { text: "Unlimited transcriptions", included: true },
-    { text: "No audio length limit", included: true },
-    { text: "All 5 Whisper models (75MB-3GB)", included: true },
-    { text: "13 languages", included: true },
-    { text: "Full app window & menu bar", included: true },
-    { text: "Priority support", included: true },
-    { text: "Use on 3 machines", included: true },
+    t("pro.feature1"),
+    t("pro.feature2"),
+    t("pro.feature3"),
+    t("pro.feature4"),
+    t("pro.feature5"),
+    t("pro.feature6"),
+    t("pro.feature7"),
   ];
 
-  const faqs = [
-    {
-      question: "What are the system requirements?",
-      answer:
-        "DropVox requires macOS 14 (Sonoma) or later and an Apple Silicon Mac (M1, M2, M3, or later). WhisperKit is optimized specifically for Apple's Neural Engine, so Intel Macs are not supported.",
-    },
-    {
-      question: "Why doesn't it work on Intel Macs?",
-      answer:
-        "DropVox uses WhisperKit, Apple's optimized implementation of Whisper AI. WhisperKit leverages the Neural Engine in Apple Silicon chips for fast, efficient transcription. Intel Macs don't have this hardware.",
-    },
-    {
-      question: "How does the license work?",
-      answer:
-        "Your license is a one-time purchase valid for DropVox v1.x. You can use it on up to 3 machines. When v2 releases with major new features, you'll have the option to upgrade.",
-    },
-    {
-      question: "What's the difference between the Whisper models?",
-      answer:
-        "DropVox offers 5 models: Tiny (75MB, fastest), Base (145MB, fast), Small (470MB, balanced), Medium (1.5GB, accurate), and Large (3GB, most accurate). Larger models are slower but more accurate. Free tier uses Base; Pro unlocks all models.",
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept all major credit cards through Stripe. Your payment information is never stored on our servers.",
-    },
-    {
-      question: "Can I get a refund?",
-      answer:
-        "Yes, we offer a 14-day money-back guarantee. If you're not satisfied, contact us for a full refund.",
-    },
-    {
-      question: "What happens to my transcriptions?",
-      answer:
-        "All transcriptions happen locally on your Mac using WhisperKit AI. Your audio never leaves your computer - we have no access to your data. History is stored locally and can be cleared anytime.",
-    },
-    {
-      question: "Do I need an internet connection?",
-      answer:
-        "Internet is only needed to download the AI model initially and to validate your license occasionally. Transcription itself works completely offline.",
-    },
-  ];
+  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"] as const;
+  const faqs = faqKeys.map((key) => ({
+    question: t(`faq.${key}.question`),
+    answer: t(`faq.${key}.answer`),
+  }));
 
   return (
     <div className="min-h-screen">
@@ -157,22 +117,21 @@ export default async function PricingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-              Simple,{" "}
+              {t("hero.titleStart")}
               <span className="text-indigo-600 dark:text-indigo-400">
-                transparent
-              </span>{" "}
-              pricing
+                {t("hero.titleHighlight")}
+              </span>
+              {t("hero.titleEnd")}
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Start free with 3 transcriptions per day. Upgrade to Pro for
-              unlimited transcriptions and longer audio files.
+              {t("hero.subtitle")}
             </p>
           </FadeIn>
           <FadeIn delay={150}>
             <p className="mt-4 text-sm text-slate-500 dark:text-slate-500">
-              Requires macOS 14+ (Sonoma) and Apple Silicon (M1/M2/M3)
+              {t("hero.requirements")}
             </p>
           </FadeIn>
         </div>
@@ -186,22 +145,22 @@ export default async function PricingPage() {
             <FadeIn delay={200}>
               <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8">
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  Free
+                  {t("free.name")}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-6">
-                  Perfect for trying out DropVox
+                  {t("free.description")}
                 </p>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-slate-900 dark:text-white">
-                    $0
+                    {freePrice}
                   </span>
-                  <span className="text-slate-500 ml-2">forever</span>
+                  <span className="text-slate-500 ml-2">{t("free.priceLabel")}</span>
                 </div>
                 <Link
                   href="/"
                   className="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-600 hover:border-slate-400 dark:hover:border-slate-500 font-medium transition-colors mb-8"
                 >
-                  Download Free
+                  {t("free.downloadButton")}
                 </Link>
                 <ul className="space-y-4">
                   {freeFeatures.map((feature, index) => (
@@ -227,28 +186,32 @@ export default async function PricingPage() {
               <div className="relative rounded-2xl border-2 border-indigo-500 bg-white dark:bg-slate-800 p-8">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="px-4 py-1 bg-indigo-600 text-white text-sm font-medium rounded-full">
-                    Most Popular
+                    {t("pro.badge")}
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  Pro
+                  {t("pro.name")}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-6">
-                  For power users who need more
+                  {t("pro.description")}
                 </p>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-slate-900 dark:text-white">
                     {proPrice}
                   </span>
-                  <span className="text-slate-500 ml-2">{proPriceLabel}</span>
+                  <span className="text-slate-500 ml-2">{t("pro.priceLabel")}</span>
                 </div>
-                <CheckoutButton locale={locale} />
+                <CheckoutButton
+                  locale={locale}
+                  label={t("pro.checkoutButton")}
+                  loadingLabel={t("pro.checkoutLoading")}
+                />
                 <ul className="space-y-4">
                   {proFeatures.map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <CheckIcon />
                       <span className="text-slate-700 dark:text-slate-300">
-                        {feature.text}
+                        {feature}
                       </span>
                     </li>
                   ))}
@@ -264,7 +227,7 @@ export default async function PricingPage() {
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <h2 className="text-3xl font-bold text-center mb-12">
-              Frequently Asked Questions
+              {t("faq.title")}
             </h2>
           </FadeIn>
           <div className="space-y-6">
@@ -294,7 +257,7 @@ export default async function PricingPage() {
               className="rounded-md"
             />
             <span className="text-sm text-slate-600 dark:text-slate-400">
-              Built by{" "}
+              {t("footer.builtBy")}{" "}
               <a
                 href="https://github.com/helrabelo"
                 target="_blank"
@@ -310,25 +273,25 @@ export default async function PricingPage() {
               href="/"
               className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
-              Home
+              {t("footer.home")}
             </Link>
             <Link
               href="/privacy"
               className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
-              Privacy
+              {t("footer.privacy")}
             </Link>
             <Link
               href="/terms"
               className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
-              Terms
+              {t("footer.terms")}
             </Link>
             <Link
               href="/support"
               className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
-              Support
+              {t("footer.support")}
             </Link>
           </div>
         </div>
