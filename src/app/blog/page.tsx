@@ -123,14 +123,6 @@ export default function BlogPage() {
             >
               Home
             </Link>
-            <a
-              href="https://github.com/helsky-labs/dropvox"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              GitHub
-            </a>
           </div>
         </div>
       </footer>

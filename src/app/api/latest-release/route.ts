@@ -36,11 +36,11 @@ export async function GET() {
     // Fallback to hardcoded latest known version
     return NextResponse.json(
       {
-        version: "0.7.2",
-        tagName: "v0.7.2",
+        version: "1.0.0",
+        tagName: "v1.0.0",
         downloadUrl:
-          "https://github.com/helsky-labs/dropvox/releases/download/v0.7.2/DropVox-0.7.2.dmg",
-        fileName: "DropVox-0.7.2.dmg",
+          "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg",
+        fileName: "DropVox-1.0.0.dmg",
         error: "Failed to fetch latest release",
       },
       { status: 200 } // Still return 200 with fallback data

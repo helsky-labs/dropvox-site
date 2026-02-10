@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "DropVox - Transcreva Mensagens de Audio do WhatsApp",
+    "title": "DropVox - Transcreva Mensagens de Áudio do WhatsApp",
     "description": "App nativo para macOS que converte mensagens de voz em texto usando IA local. Funciona offline, suporta 13 idiomas, otimizado para Apple Silicon."
   },
   "nav": {
@@ -9,100 +9,100 @@
   "hero": {
     "badge": "App Swift Nativo - v1.0",
     "title": "Transcreva",
-    "titleHighlight": "Audios do WhatsApp",
+    "titleHighlight": "Áudios do WhatsApp",
     "titleEnd": "em Segundos",
-    "description": "DropVox e um app nativo para macOS que converte mensagens de voz em texto usando WhisperKit AI. Janela completa, acesso via menu bar e zona de arraste flutuante. Funciona offline, suporta 13 idiomas e nunca envia seu audio para lugar nenhum.",
+    "description": "DropVox é um app nativo para macOS que converte mensagens de voz em texto usando WhisperKit AI. Janela completa, acesso via menu bar e zona de arraste flutuante. Funciona offline, suporta 13 idiomas e nunca envia seu áudio para lugar nenhum.",
     "downloadButton": "Baixar para macOS",
     "featuresButton": "Ver Recursos",
     "requirements": "Requer macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB para modelos de IA"
   },
   "preview": {
     "menuBar": "Janela Principal - Dashboard",
-    "selectAudio": "Selecionar Arquivos de Audio...",
-    "pasteClipboard": "Colar da Area de Transferencia (Cmd+V)",
-    "recent": "Transcricoes Recentes",
+    "selectAudio": "Selecionar Arquivos de Áudio...",
+    "pasteClipboard": "Colar da Área de Transferência (Cmd+V)",
+    "recent": "Transcrições Recentes",
     "recentMessage1": "\"Oi, pode me ligar quando...\"",
-    "recentTime1": "2min atras",
-    "recentMessage2": "\"A reuniao esta marcada para...\"",
-    "recentTime2": "15min atras"
+    "recentTime1": "2min atrás",
+    "recentMessage2": "\"A reunião está marcada para...\"",
+    "recentTime2": "15min atrás"
   },
   "features": {
-    "title": "Tudo que voce precisa",
-    "description": "Uma solucao completa de transcricao com multiplas formas de trabalhar: janela completa, menu bar, atalhos de teclado e arrastar e soltar.",
+    "title": "Tudo que você precisa",
+    "description": "Uma solução completa de transcrição com múltiplas formas de trabalhar: janela completa, menu bar, atalhos de teclado e arrastar e soltar.",
     "popular": "Popular",
     "new": "Novo",
     "items": {
       "localAI": {
         "title": "WhisperKit AI",
-        "description": "Usa WhisperKit otimizado para Apple Silicon. Escolha entre 5 modelos (75MB-3GB). Nao precisa de internet apos a configuracao."
+        "description": "Usa WhisperKit otimizado para Apple Silicon. Escolha entre 5 modelos (75MB-3GB). Não precisa de internet após a configuração."
       },
       "languages": {
         "title": "13 Idiomas",
-        "description": "Deteccao automatica ou escolha: Portugues, Ingles, Espanhol, Frances, Alemao, Chines, Japones, Coreano e mais."
+        "description": "Detecção automática ou escolha: Português, Inglês, Espanhol, Francês, Alemão, Chinês, Japonês, Coreano e mais."
       },
       "fullApp": {
         "title": "Janela Completa",
-        "description": "Dashboard com acoes rapidas, navegador de historico com busca e configuracoes. Nao e mais apenas um app de menu bar."
+        "description": "Dashboard com ações rápidas, navegador de histórico com busca e configurações. Não é mais apenas um app de menu bar."
       },
       "clipboard": {
         "title": "Colar com Cmd+V",
-        "description": "Copie arquivos de audio no Finder, pressione Cmd+V no DropVox. Transcricao instantanea com resultados copiados automaticamente."
+        "description": "Copie arquivos de áudio no Finder, pressione Cmd+V no DropVox. Transcrição instantânea com resultados copiados automaticamente."
       },
       "dropZone": {
         "title": "Zona de Arraste",
-        "description": "Janela flutuante para arrastar e soltar. Mantenha visivel enquanto navega pelos arquivos. Ative com Cmd+D."
+        "description": "Janela flutuante para arrastar e soltar. Mantenha visível enquanto navega pelos arquivos. Ative com Cmd+D."
       },
       "history": {
-        "title": "Navegador de Historico",
-        "description": "Historico completo de todas as transcricoes com busca. Veja detalhes, copie texto, veja qual modelo foi usado."
+        "title": "Navegador de Histórico",
+        "description": "Histórico completo de todas as transcrições com busca. Veja detalhes, copie texto, veja qual modelo foi usado."
       },
       "models": {
-        "title": "Selecao de Modelo",
-        "description": "Escolha precisao vs velocidade: Tiny (75MB, mais rapido) ate Large (3GB, mais preciso). Baixe apenas o que precisar."
+        "title": "Seleção de Modelo",
+        "description": "Escolha precisão vs velocidade: Tiny (75MB, mais rápido) até Large (3GB, mais preciso). Baixe apenas o que precisar."
       },
       "privacy": {
         "title": "100% Privado",
-        "description": "Seu audio nunca sai do seu Mac. Sem nuvem, sem contas, sem coleta de dados. Tudo roda localmente."
+        "description": "Seu áudio nunca sai do seu Mac. Sem nuvem, sem contas, sem coleta de dados. Tudo roda localmente."
       }
     }
   },
   "howItWorks": {
     "title": "Como funciona",
-    "description": "Tres formas de transcrever seus arquivos de audio - use a que melhor se encaixa no seu fluxo de trabalho.",
+    "description": "Três formas de transcrever seus arquivos de áudio - use a que melhor se encaixa no seu fluxo de trabalho.",
     "steps": {
       "download": {
         "title": "Baixe e Instale",
-        "description": "Baixe o DMG, arraste DropVox para Aplicativos. Na primeira execucao, escolha e baixe um modelo de IA (75MB-3GB)."
+        "description": "Baixe o DMG, arraste DropVox para Aplicativos. Na primeira execução, escolha e baixe um modelo de IA (75MB-3GB)."
       },
       "select": {
         "title": "Transcreva do Seu Jeito",
-        "description": "Use a janela principal, clique no icone do menu bar, pressione Cmd+V para colar ou arraste arquivos para a Zona de Arraste. Suporta .opus, .mp3, .m4a e .wav."
+        "description": "Use a janela principal, clique no ícone do menu bar, pressione Cmd+V para colar ou arraste arquivos para a Zona de Arraste. Suporta .opus, .mp3, .m4a e .wav."
       },
       "getText": {
         "title": "Receba o Texto",
-        "description": "Acompanhe o progresso em tempo real. O texto e copiado automaticamente para a area de transferencia e salvo no historico. Opcionalmente veja os resultados em uma janela flutuante."
+        "description": "Acompanhe o progresso em tempo real. O texto é copiado automaticamente para a área de transferência e salvo no histórico. Opcionalmente veja os resultados em uma janela flutuante."
       }
     }
   },
   "privacy": {
     "title": "Sua privacidade importa",
-    "description": "DropVox roda totalmente no seu Mac. Seus arquivos de audio sao processados localmente usando WhisperKit, a implementacao otimizada da Apple do Whisper AI. Sem uploads na nuvem, sem necessidade de conta, sem coleta de dados. Nunca.",
-    "noInternet": "Nao precisa de internet",
-    "noAccount": "Nao precisa de conta",
-    "openSource": "Codigo aberto"
+    "description": "DropVox roda totalmente no seu Mac. Seus arquivos de áudio são processados localmente usando WhisperKit, a implementação otimizada da Apple do Whisper AI. Sem uploads na nuvem, sem necessidade de conta, sem coleta de dados. Nunca.",
+    "noInternet": "Não precisa de internet",
+    "noAccount": "Não precisa de conta",
+    "openSource": "Design focado em privacidade"
   },
   "cta": {
     "title": "Pronto para transcrever?",
     "description": "Baixe o DropVox e comece a converter mensagens de voz em texto em segundos.",
     "downloadButton": "Baixar para macOS",
     "githubButton": "Ver no GitHub",
-    "version": "macOS 14+ (Sonoma) • Apple Silicon • Licenca MIT"
+    "version": "macOS 14+ (Sonoma) • Apple Silicon"
   },
   "support": {
-    "title": "Achou util?",
-    "description": "DropVox e gratuito e open source. Se ele economiza seu tempo transcrevendo mensagens de voz, considere me pagar um cafe.",
+    "title": "Achou útil?",
+    "description": "DropVox processa tudo no seu dispositivo. Seu áudio nunca sai do seu Mac. Se ele economiza seu tempo transcrevendo mensagens de voz, considere me pagar um café.",
     "pix": "PIX",
-    "pixKeyLabel": "Chave PIX (Aleatoria)",
+    "pixKeyLabel": "Chave PIX (Aleatória)",
     "copyButton": "Copiar Chave PIX",
     "copiedButton": "Copiado!"
   },
@@ -115,73 +115,73 @@
     "label": "Idioma"
   },
   "privacyPage": {
-    "title": "Politica de Privacidade",
+    "title": "Política de Privacidade",
     "description": "Como o DropVox lida com seus dados e privacidade.",
-    "lastUpdated": "Ultima atualizacao: Fevereiro de 2026",
+    "lastUpdated": "Última atualização: Fevereiro de 2026",
     "overview": {
-      "title": "Visao Geral",
-      "text": "DropVox e um app para macOS que transcreve arquivos de audio usando IA local. Sua privacidade e fundamental para como construimos este produto. O processamento de audio acontece totalmente no seu Mac — nenhum dado de audio e enviado para nossos servidores ou terceiros."
+      "title": "Visão Geral",
+      "text": "DropVox é um app para macOS que transcreve arquivos de áudio usando IA local. Sua privacidade é fundamental para como construímos este produto. O processamento de áudio acontece totalmente no seu Mac — nenhum dado de áudio é enviado para nossos servidores ou terceiros."
     },
     "audioProcessing": {
-      "title": "Processamento de Audio",
-      "text": "Toda transcricao e realizada localmente no seu Mac usando WhisperKit, uma implementacao otimizada do modelo Whisper da OpenAI para Apple Silicon.",
+      "title": "Processamento de Áudio",
+      "text": "Toda transcrição é realizada localmente no seu Mac usando WhisperKit, uma implementação otimizada do modelo Whisper da OpenAI para Apple Silicon.",
       "items": {
-        "noUpload": "Seus arquivos de audio nunca sao enviados para nenhum servidor",
-        "noStorage": "Nenhum dado de audio e armazenado alem da sua maquina local",
-        "noAccess": "Nao temos capacidade de acessar seus arquivos de audio ou transcricoes"
+        "noUpload": "Seus arquivos de áudio nunca são enviados para nenhum servidor",
+        "noStorage": "Nenhum dado de áudio é armazenado além da sua máquina local",
+        "noAccess": "Não temos capacidade de acessar seus arquivos de áudio ou transcrições"
       }
     },
     "dataCollected": {
       "title": "Dados que Coletamos",
       "purchase": {
         "title": "Na Compra",
-        "text": "Quando voce compra uma licenca DropVox Pro, coletamos seu endereco de email (fornecido ao Stripe durante o checkout). Isso e usado exclusivamente para entregar sua chave de licenca e comunicacoes relacionadas a compra."
+        "text": "Quando você compra uma licença DropVox Pro, coletamos seu endereço de email (fornecido ao Stripe durante o checkout). Isso é usado exclusivamente para entregar sua chave de licença e comunicações relacionadas à compra."
       },
       "license": {
-        "title": "Ativacao de Licenca",
-        "text": "Quando voce ativa uma licenca, o ID da sua maquina (um identificador de hardware) e enviado ao nosso servidor para gerenciar ativacoes de dispositivos. Cada licenca suporta ate 3 maquinas. Tambem recebemos a versao do app e versao do SO para verificacoes de compatibilidade."
+        "title": "Ativação de Licença",
+        "text": "Quando você ativa uma licença, o ID da sua máquina (um identificador de hardware) é enviado ao nosso servidor para gerenciar ativações de dispositivos. Cada licença suporta até 3 máquinas. Também recebemos a versão do app e versão do SO para verificações de compatibilidade."
       },
       "telemetry": {
-        "title": "Telemetria Anonima (Desativavel)",
-        "text": "DropVox inclui telemetria anonima opcional via TelemetryDeck para nos ajudar a melhorar o app.",
+        "title": "Telemetria Anônima (Desativável)",
+        "text": "DropVox inclui telemetria anônima opcional via TelemetryDeck para nos ajudar a melhorar o app.",
         "items": {
-          "events": "Eventos rastreados: inicializacoes do app, inicio/conclusao/falha de transcricao, downloads de modelos",
-          "noPersonal": "Nenhuma informacao pessoal, conteudo de audio ou texto de transcricao e incluido",
-          "optOut": "Voce pode desativar a telemetria em Configuracoes > Geral > \"Ajudar a Melhorar o DropVox\""
+          "events": "Eventos rastreados: inicializações do app, início/conclusão/falha de transcrição, downloads de modelos",
+          "noPersonal": "Nenhuma informação pessoal, conteúdo de áudio ou texto de transcrição é incluído",
+          "optOut": "Você pode desativar a telemetria em Configurações > Geral > \"Ajudar a Melhorar o DropVox\""
         }
       }
     },
     "thirdParties": {
-      "title": "Servicos de Terceiros",
-      "stripe": "Processamento de pagamentos. Lida com informacoes de cartao de credito de forma segura. Nunca vemos ou armazenamos seus dados de cartao.",
-      "resend": "Entrega de emails transacionais. Usado para enviar chaves de licenca e emails de restauracao.",
-      "supabase": "Hospedagem de banco de dados. Armazena registros de licenca (chave, email, ativacoes de maquina).",
-      "telemetrydeck": "Analiticos focados em privacidade. Coleta sinais de uso anonimos sem identificadores pessoais."
+      "title": "Serviços de Terceiros",
+      "stripe": "Processamento de pagamentos. Lida com informações de cartão de crédito de forma segura. Nunca vemos ou armazenamos seus dados de cartão.",
+      "resend": "Entrega de emails transacionais. Usado para enviar chaves de licença e emails de restauração.",
+      "supabase": "Hospedagem de banco de dados. Armazena registros de licença (chave, email, ativações de máquina).",
+      "telemetrydeck": "Analíticos focados em privacidade. Coleta sinais de uso anônimos sem identificadores pessoais."
     },
     "noTracking": {
       "title": "Sem Rastreamento",
-      "text": "DropVox nao usa cookies de rastreamento, redes de publicidade ou qualquer forma de rastreamento entre sites. O site usa analiticos focados em privacidade que nao rastreiam usuarios individuais."
+      "text": "DropVox não usa cookies de rastreamento, redes de publicidade ou qualquer forma de rastreamento entre sites. O site usa analíticos focados em privacidade que não rastreiam usuários individuais."
     },
     "retention": {
-      "title": "Retencao de Dados",
-      "text": "Registros de licenca sao mantidos enquanto sua licenca estiver ativa. Se voce solicitar a exclusao, removeremos seus dados dentro de 30 dias. Dados de telemetria sao automaticamente agregados e anonimizados."
+      "title": "Retenção de Dados",
+      "text": "Registros de licença são mantidos enquanto sua licença estiver ativa. Se você solicitar a exclusão, removeremos seus dados dentro de 30 dias. Dados de telemetria são automaticamente agregados e anonimizados."
     },
     "contact": {
       "title": "Contato",
-      "text": "Se voce tiver perguntas sobre esta politica de privacidade ou quiser solicitar a exclusao de dados, entre em contato conosco em"
+      "text": "Se você tiver perguntas sobre esta política de privacidade ou quiser solicitar a exclusão de dados, entre em contato conosco em"
     }
   },
   "supportPage": {
     "title": "Suporte",
     "description": "Obtenha ajuda com o DropVox.",
-    "subtitle": "Precisa de ajuda? Estamos aqui para voce.",
+    "subtitle": "Precisa de ajuda? Estamos aqui para você.",
     "contact": {
       "email": {
         "title": "Suporte por Email"
       },
       "github": {
         "title": "Reportar um Bug",
-        "description": "Abra uma issue no GitHub"
+        "description": "Envie um email sobre qualquer problema encontrado"
       }
     },
     "faq": {
@@ -189,76 +189,76 @@
       "common": {
         "title": "Problemas Comuns",
         "modelDownload": {
-          "q": "O download do modelo esta travado ou falhando",
-          "a": "Certifique-se de ter uma conexao de internet estavel. Os modelos variam de 75MB a 3GB. Tente um modelo menor primeiro (Tiny ou Base). Se o download falhar, reinicie o DropVox e tente novamente — ele retomara de onde parou."
+          "q": "O download do modelo está travado ou falhando",
+          "a": "Certifique-se de ter uma conexão de internet estável. Os modelos variam de 75MB a 3GB. Tente um modelo menor primeiro (Tiny ou Base). Se o download falhar, reinicie o DropVox e tente novamente — ele retomará de onde parou."
         },
         "accuracy": {
-          "q": "A transcricao nao esta precisa",
-          "a": "Tente um modelo maior para melhor precisao. Os modelos Small ou Medium funcionam bem para a maioria dos audios. Tambem certifique-se de que o idioma correto esta selecionado — ou use a Deteccao Automatica. Audio claro com minimo de ruido de fundo da os melhores resultados."
+          "q": "A transcrição não está precisa",
+          "a": "Tente um modelo maior para melhor precisão. Os modelos Small ou Medium funcionam bem para a maioria dos áudios. Também certifique-se de que o idioma correto está selecionado — ou use a Detecção Automática. Áudio claro com mínimo de ruído de fundo dá os melhores resultados."
         },
         "formats": {
-          "q": "Quais formatos de audio sao suportados?",
-          "a": "DropVox suporta .opus (padrao do WhatsApp), .mp3, .m4a e .wav. Se seu arquivo nao for reconhecido, tente converte-lo para um desses formatos."
+          "q": "Quais formatos de áudio são suportados?",
+          "a": "DropVox suporta .opus (padrão do WhatsApp), .mp3, .m4a e .wav. Se seu arquivo não for reconhecido, tente convertê-lo para um desses formatos."
         },
         "offline": {
           "q": "O DropVox funciona offline?",
-          "a": "Sim! Apos baixar um modelo Whisper, toda transcricao acontece localmente no seu Mac sem necessidade de internet. Internet so e necessaria para o download inicial do modelo e ativacao de licenca."
+          "a": "Sim! Após baixar um modelo Whisper, toda transcrição acontece localmente no seu Mac sem necessidade de internet. Internet só é necessária para o download inicial do modelo e ativação de licença."
         }
       },
       "license": {
-        "title": "Licenca e Cobranca",
+        "title": "Licença e Cobrança",
         "free": {
-          "q": "O que esta incluido no plano gratuito?",
-          "a": "O plano gratuito inclui 3 transcricoes por dia com duracao maxima de 60 segundos por arquivo. Atualize para Pro para transcricoes ilimitadas sem limites de duracao."
+          "q": "O que está incluído no plano gratuito?",
+          "a": "O plano gratuito inclui 3 transcrições por dia com duração máxima de 60 segundos por arquivo. Atualize para Pro para transcrições ilimitadas sem limites de duração."
         },
         "activate": {
-          "q": "Como ativo minha licenca?",
-          "a": "Abra o DropVox, va em Configuracoes > Licenca, cole sua chave de licenca e clique em Ativar. Sua chave foi enviada para o email usado no checkout."
+          "q": "Como ativo minha licença?",
+          "a": "Abra o DropVox, vá em Configurações > Licença, cole sua chave de licença e clique em Ativar. Sua chave foi enviada para o email usado no checkout."
         },
         "machines": {
-          "q": "Em quantas maquinas posso usar?",
-          "a": "Cada licenca DropVox Pro pode ser ativada em ate 3 maquinas. Se precisar mover sua licenca para uma nova maquina, entre em contato com o suporte."
+          "q": "Em quantas máquinas posso usar?",
+          "a": "Cada licença DropVox Pro pode ser ativada em até 3 máquinas. Se precisar mover sua licença para uma nova máquina, entre em contato com o suporte."
         },
         "lost": {
-          "q": "Perdi minha chave de licenca",
-          "a": "Visite a pagina de Restaurar Licenca e insira o email que usou na compra. Enviaremos sua(s) chave(s) de licenca para esse email."
+          "q": "Perdi minha chave de licença",
+          "a": "Visite a página de Restaurar Licença e insira o email que usou na compra. Enviaremos sua(s) chave(s) de licença para esse email."
         }
       },
       "technical": {
-        "title": "Tecnico",
+        "title": "Técnico",
         "requirements": {
-          "q": "Quais sao os requisitos do sistema?",
-          "a": "DropVox requer macOS 14 (Sonoma) ou posterior e um Mac com Apple Silicon (M1 ou mais recente). Macs Intel nao sao suportados."
+          "q": "Quais são os requisitos do sistema?",
+          "a": "DropVox requer macOS 14 (Sonoma) ou posterior e um Mac com Apple Silicon (M1 ou mais recente). Macs Intel não são suportados."
         },
         "storage": {
-          "q": "Quanto espaco os modelos ocupam?",
-          "a": "Os modelos variam de ~75MB (Tiny) a ~3GB (Large). Voce so baixa o modelo que escolher. Os modelos sao armazenados em ~/Library/Caches/ e podem ser excluidos a qualquer momento."
+          "q": "Quanto espaço os modelos ocupam?",
+          "a": "Os modelos variam de ~75MB (Tiny) a ~3GB (Large). Você só baixa o modelo que escolher. Os modelos são armazenados em ~/Library/Caches/ e podem ser excluídos a qualquer momento."
         },
         "privacy": {
-          "q": "Meu audio e enviado para a nuvem?",
-          "a": "Nao. Toda transcricao acontece localmente no seu Mac usando WhisperKit. Seus arquivos de audio nunca saem do seu dispositivo. Veja nossa Politica de Privacidade para detalhes completos."
+          "q": "Meu áudio é enviado para a nuvem?",
+          "a": "Não. Toda transcrição acontece localmente no seu Mac usando WhisperKit. Seus arquivos de áudio nunca saem do seu dispositivo. Veja nossa Política de Privacidade para detalhes completos."
         }
       }
     },
     "restore": {
-      "title": "Perdeu sua chave de licenca?",
-      "text": "Insira o email que usou no checkout e enviaremos sua(s) chave(s) de licenca.",
-      "button": "Restaurar Licenca"
+      "title": "Perdeu sua chave de licença?",
+      "text": "Insira o email que usou no checkout e enviaremos sua(s) chave(s) de licença.",
+      "button": "Restaurar Licença"
     }
   },
   "restorePage": {
-    "title": "Restaurar Licenca",
-    "subtitle": "Insira o email que voce usou ao comprar o DropVox Pro.",
-    "emailLabel": "Endereco de email",
+    "title": "Restaurar Licença",
+    "subtitle": "Insira o email que você usou ao comprar o DropVox Pro.",
+    "emailLabel": "Endereço de email",
     "emailPlaceholder": "voce@exemplo.com",
-    "submit": "Enviar Chave de Licenca",
+    "submit": "Enviar Chave de Licença",
     "submitting": "Enviando...",
     "error": "Algo deu errado. Tente novamente ou entre em contato com support@dropvox.app.",
-    "hint": "Se uma licenca for encontrada, enviaremos a chave para seu email. Por seguranca, nao confirmamos se uma conta existe.",
+    "hint": "Se uma licença for encontrada, enviaremos a chave para seu email. Por segurança, não confirmamos se uma conta existe.",
     "success": {
       "title": "Verifique seu email",
-      "text": "Se encontramos uma licenca associada a esse email, enviamos a(s) chave(s) para sua caixa de entrada. Verifique sua pasta de spam se nao ver em alguns minutos.",
-      "backHome": "Voltar para inicio"
+      "text": "Se encontramos uma licença associada a esse email, enviamos a(s) chave(s) para sua caixa de entrada. Verifique sua pasta de spam se não ver em alguns minutos.",
+      "backHome": "Voltar para início"
     }
   }
 }

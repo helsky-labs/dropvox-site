@@ -26,6 +26,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Basic email format validation
+    if (!email.includes("@") || email.length > 254) {
+      return NextResponse.json({ error: "Invalid email format" }, { status: 400 });
+    }
+
     // Look up licenses by email
     const { data: licenses } = await supabase
       .from("licenses")

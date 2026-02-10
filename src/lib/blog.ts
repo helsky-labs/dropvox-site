@@ -45,13 +45,13 @@ DropVox transcribes everything **locally on your Mac** using WhisperKit AI optim
 1. **100% Private**: Your audio never leaves your computer
 2. **No Internet Required**: Works completely offline
 3. **No Account Needed**: No sign-ups, no tracking
-4. **Free Forever**: Open source and community-driven
+4. **On-Device AI**: All processing happens locally on your Mac
 
 ## Step-by-Step Guide
 
 ### 1. Download DropVox
 
-Download the latest version from our website or GitHub releases. It's a simple DMG file that installs like any Mac app. Requires macOS 14 (Sonoma) or later and Apple Silicon.
+Download the latest version from our website. It's a simple DMG file that installs like any Mac app. Requires macOS 14 (Sonoma) or later and Apple Silicon.
 
 ### 2. Launch the App
 
@@ -95,7 +95,7 @@ The text is automatically copied to your clipboard. You can also:
 
 ## Conclusion
 
-With DropVox, transcribing WhatsApp audio messages is fast, private, and free. No more struggling to listen in quiet environments or missing important information buried in voice messages.
+With DropVox, transcribing WhatsApp audio messages is fast, private, and easy. No more struggling to listen in quiet environments or missing important information buried in voice messages.
 
 Download DropVox today and take control of your audio transcriptions.
     `,
@@ -117,7 +117,7 @@ Whisper is OpenAI's revolutionary speech recognition model. Unlike traditional t
 - Handles multiple languages (100+)
 - Works with various accents and audio quality
 - Can run locally on your computer
-- Is completely open source
+- Is built on publicly available research
 
 ## Why Local Whisper Apps Matter
 
@@ -149,7 +149,7 @@ DropVox is a native Swift app designed for quick, everyday transcription needs. 
 - Floating Drop Zone for drag-and-drop
 - Cmd+V paste support
 - 5 model sizes (75MB to 3GB)
-- Completely free and open source
+- Private and on-device - your audio never leaves your Mac
 - WhisperKit optimized for Apple Silicon
 
 **Cons:**
@@ -205,7 +205,7 @@ We created DropVox because we needed a tool that:
 - **Just works**: Multiple ways to transcribe (file picker, paste, drag-drop)
 - **Stays private**: No cloud, no accounts
 - **Feels native**: Full Swift/SwiftUI app optimized for macOS
-- **Costs nothing**: Free for everyone
+- **Keeps it simple**: Focus on fast, everyday transcription
 - **Gives you options**: Choose from 5 AI models based on your needs
 
 For users who receive lots of voice messages and want quick, private transcription, DropVox fills a gap that other apps don't address.
@@ -214,7 +214,7 @@ For users who receive lots of voice messages and want quick, private transcripti
 
 The best Whisper app depends on your needs. For everyday users who want quick, private transcription of voice messages on Apple Silicon Macs, DropVox is an excellent choice. For professional transcription work with advanced features, consider MacWhisper.
 
-Try DropVox free today and see how local AI transcription can fit into your workflow.
+Try DropVox today and see how local AI transcription can fit into your workflow.
     `,
   },
   {
@@ -280,13 +280,13 @@ Cloud services need accounts for:
 
 Local apps like DropVox need none of this. Download, install, use. That's it.
 
-### Open Source Transparency
+### Built with Privacy at Its Core
 
-DropVox is open source. This means:
-- Anyone can verify what the code does
+DropVox is built with privacy as a foundational principle. All processing happens on your device - your audio never leaves your Mac, no cloud services are involved. This means:
 - No hidden data collection
-- Community oversight
-- Trust through transparency
+- No server-side processing
+- Your conversations stay yours
+- Trust through on-device architecture
 
 ## Setting Up Private Transcription
 
@@ -294,9 +294,9 @@ DropVox is open source. This means:
 
 DropVox is designed for privacy-first transcription:
 - No network requests during transcription
-- No analytics or tracking
-- No account creation
-- Open source code
+- No analytics or tracking of your audio content
+- No account creation required
+- Everything runs on your Mac
 
 ### Step 2: Understand the Process
 

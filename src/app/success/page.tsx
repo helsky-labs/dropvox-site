@@ -2,9 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const DOWNLOAD_URL = "https://github.com/helsky-labs/dropvox/releases/latest";
+// Fetch latest release info from the site's own API
+async function getDownloadUrl() {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://dropvox.app";
+    const res = await fetch(`${baseUrl}/api/latest-release`, {
+      next: { revalidate: 300 },
+    });
 
-export default function SuccessPage() {
+    if (!res.ok) throw new Error("API error");
+
+    const data = await res.json();
+    return data.downloadUrl || "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg";
+  } catch {
+    return "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg";
+  }
+}
+
+export default async function SuccessPage() {
+  const downloadUrl = await getDownloadUrl();
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
@@ -92,9 +109,7 @@ export default function SuccessPage() {
           <FadeIn delay={400}>
             <div className="space-y-4">
               <a
-                href={DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={downloadUrl}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-colors"
               >
                 <svg

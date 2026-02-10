@@ -61,9 +61,7 @@ export default async function SupportPage() {
               </a>
 
               <a
-                href="https://github.com/helsky-labs/dropvox/issues"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:support@dropvox.app?subject=Bug%20Report"
                 className="flex items-start gap-4 p-6 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-800 transition-colors"
               >
                 <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center flex-shrink-0">

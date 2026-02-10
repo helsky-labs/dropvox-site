@@ -89,18 +89,18 @@
     "description": "DropVox runs entirely on your Mac. Your audio files are processed locally using WhisperKit, Apple's optimized implementation of Whisper AI. No cloud uploads, no accounts required, no data collection. Ever.",
     "noInternet": "No internet required",
     "noAccount": "No account needed",
-    "openSource": "Open source code"
+    "openSource": "Privacy-first design"
   },
   "cta": {
     "title": "Ready to transcribe?",
     "description": "Download DropVox and start converting voice messages to text in seconds.",
     "downloadButton": "Download for macOS",
     "githubButton": "View on GitHub",
-    "version": "macOS 14+ (Sonoma) • Apple Silicon • MIT License"
+    "version": "macOS 14+ (Sonoma) • Apple Silicon"
   },
   "support": {
     "title": "Find this helpful?",
-    "description": "DropVox is free and open source. If it saves you time transcribing voice messages, consider buying me a coffee.",
+    "description": "DropVox processes everything on your device. Your audio never leaves your Mac. If it saves you time transcribing voice messages, consider buying me a coffee.",
     "pix": "PIX",
     "pixKeyLabel": "PIX Key (Random)",
     "copyButton": "Copy PIX Key",
@@ -181,7 +181,7 @@
       },
       "github": {
         "title": "Report a Bug",
-        "description": "Open an issue on GitHub"
+        "description": "Email us about any issues you encounter"
       }
     },
     "faq": {

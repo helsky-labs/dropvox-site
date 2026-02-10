@@ -19,6 +19,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Missing machine_id" }, { status: 400 });
     }
 
+    if (typeof machine_id !== "string" || machine_id.length > 100) {
+      return NextResponse.json({ error: "Invalid machine ID format" }, { status: 400 });
+    }
+
     const today = new Date().toISOString().split("T")[0];
 
     if (action === "check") {

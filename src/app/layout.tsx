@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "native swift app",
     "on-device ai",
   ],
-  authors: [{ name: "Hel Rabelo", url: "https://github.com/helrabelo" }],
+  authors: [{ name: "Hel Rabelo" }],
   creator: "Hel Rabelo",
   publisher: "Hel Rabelo",
   applicationName: "DropVox",
@@ -66,27 +66,12 @@ export const metadata: Metadata = {
     alternateLocale: "pt_BR",
     url: BASE_URL,
     siteName: "DropVox",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DropVox - WhatsApp Audio Transcription for Mac",
-      },
-      {
-        url: "/icon.png",
-        width: 512,
-        height: 512,
-        alt: "DropVox Icon",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DropVox - Audio Transcription for Mac",
     description:
       "Native macOS app with WhisperKit AI for transcribing audio files. Full app window, menu bar, and drag-and-drop. Requires macOS 14+ and Apple Silicon.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

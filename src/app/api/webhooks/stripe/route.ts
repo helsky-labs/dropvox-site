@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
         `,
       });
 
-      console.log(`License created for ${email}: ${licenseKey}`);
+      console.log("License created successfully");
     }
   }
 

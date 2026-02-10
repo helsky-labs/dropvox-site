@@ -4,6 +4,25 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { getLocale } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const isBR = locale === "pt-BR";
+
+  return {
+    title: isBR ? "Precos" : "Pricing",
+    description: isBR
+      ? "Escolha o plano ideal para suas transcricoes com DropVox"
+      : "Choose the right plan for your transcriptions with DropVox",
+    openGraph: {
+      title: isBR ? "Precos - DropVox" : "Pricing - DropVox",
+      description: isBR
+        ? "Escolha o plano ideal para suas transcricoes com DropVox"
+        : "Choose the right plan for your transcriptions with DropVox",
+    },
+  };
+}
 
 function CheckIcon() {
   return (
@@ -44,7 +63,7 @@ function XIcon() {
 export default async function PricingPage() {
   const locale = await getLocale();
   const isBR = locale === "pt-BR";
-  const proPrice = isBR ? "R$49,00" : "$9.99";
+  const proPrice = isBR ? "R$49,90" : "$9.99";
   const proPriceLabel = isBR ? "pagamento unico" : "one-time";
   const freeFeatures = [
     { text: "3 transcriptions per day", included: true },
@@ -293,14 +312,24 @@ export default async function PricingPage() {
             >
               Home
             </Link>
-            <a
-              href="https://github.com/helsky-labs/dropvox"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/privacy"
               className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
             >
-              GitHub
-            </a>
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/support"
+              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+            >
+              Support
+            </Link>
           </div>
         </div>
       </footer>

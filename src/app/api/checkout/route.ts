@@ -17,6 +17,16 @@ export async function POST(request: NextRequest) {
     const stripe = getStripe();
     const { email, locale } = await request.json();
 
+    // Validate email format if provided
+    if (email && (typeof email !== "string" || !email.includes("@") || email.length > 254)) {
+      return NextResponse.json({ error: "Invalid email format" }, { status: 400 });
+    }
+
+    // Validate locale if provided
+    if (locale && !["en-US", "pt-BR"].includes(locale)) {
+      return NextResponse.json({ error: "Invalid locale" }, { status: 400 });
+    }
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [

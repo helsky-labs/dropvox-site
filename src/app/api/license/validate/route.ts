@@ -30,6 +30,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Validate license key format (should be a reasonable string)
+    if (typeof license_key !== "string" || license_key.length > 100) {
+      return NextResponse.json({ valid: false, error: "Invalid license key format" }, { status: 400 });
+    }
+
+    // Validate machine_id format (UUID-like string)
+    if (typeof machine_id !== "string" || machine_id.length > 100) {
+      return NextResponse.json({ valid: false, error: "Invalid machine ID format" }, { status: 400 });
+    }
+
     // Extract major version from app version (e.g., "1.2.3" -> 1)
     const appMajorVersion = parseInt(app_version.split(".")[0], 10) || 1;
 

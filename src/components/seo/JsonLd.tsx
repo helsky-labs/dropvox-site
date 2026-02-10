@@ -23,7 +23,7 @@ export function JsonLd() {
       },
       {
         "@type": "Offer",
-        price: "49.00",
+        price: "49.90",
         priceCurrency: "BRL",
         name: "Pro",
       },
@@ -36,7 +36,6 @@ export function JsonLd() {
     author: {
       "@type": "Person",
       name: "Hel Rabelo",
-      url: "https://github.com/helrabelo",
     },
     publisher: {
       "@type": "Person",
@@ -73,7 +72,6 @@ export function JsonLd() {
     name: "DropVox",
     url: baseUrl,
     logo: `${baseUrl}/icon.png`,
-    sameAs: ["https://github.com/helsky-labs/dropvox"],
   };
 
   return (
