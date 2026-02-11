@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 const PIX_KEY = "772337c9-12fc-47fa-8849-32fb5f696129";
 
@@ -18,6 +19,7 @@ export function CopyPixButton({
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(PIX_KEY);
+      trackEvent(ANALYTICS_EVENTS.PIX_COPIED);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {

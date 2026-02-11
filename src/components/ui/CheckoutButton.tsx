@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 interface CheckoutButtonProps {
   locale?: string;
@@ -15,6 +16,7 @@ export function CheckoutButton({ locale, label, loadingLabel }: CheckoutButtonPr
   const handleCheckout = async () => {
     setLoading(true);
     setError(null);
+    trackEvent(ANALYTICS_EVENTS.CHECKOUT_INITIATED, { locale });
 
     try {
       const response = await fetch("/api/checkout", {
