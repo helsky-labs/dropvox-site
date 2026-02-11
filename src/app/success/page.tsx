@@ -2,21 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-// Fetch latest release info from the site's own API
-async function getDownloadUrl() {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://dropvox.app";
-    const res = await fetch(`${baseUrl}/api/latest-release`, {
-      next: { revalidate: 300 },
-    });
+const CURRENT_VERSION = "1.0.0";
 
-    if (!res.ok) throw new Error("API error");
-
-    const data = await res.json();
-    return data.downloadUrl || "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg";
-  } catch {
-    return "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg";
-  }
+function getDownloadUrl() {
+  return `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
 }
 
 export default async function SuccessPage() {

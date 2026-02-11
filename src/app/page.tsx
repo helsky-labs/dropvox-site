@@ -7,41 +7,14 @@ import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { CopyPixButton, PIX_KEY } from "@/components/ui/CopyPixButton";
 import { DownloadButton } from "@/components/ui/DownloadButton";
 
-// Fetch latest release info from GitHub API
-async function getLatestRelease() {
-  try {
-    const res = await fetch(
-      "https://api.github.com/repos/helsky-labs/dropvox/releases/latest",
-      {
-        headers: {
-          Accept: "application/vnd.github.v3+json",
-          "User-Agent": "dropvox-site",
-        },
-        next: { revalidate: 300 }, // Cache for 5 minutes
-      }
-    );
+const CURRENT_VERSION = "1.0.0";
+const DOWNLOAD_DMG = `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
 
-    if (!res.ok) throw new Error("GitHub API error");
-
-    const data = await res.json();
-    const dmgAsset = data.assets?.find((a: { name: string }) =>
-      a.name.endsWith(".dmg")
-    );
-
-    return {
-      version: data.tag_name?.replace(/^v/, "") || "1.0.0",
-      downloadUrl:
-        dmgAsset?.browser_download_url ||
-        "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg",
-    };
-  } catch {
-    // Fallback to latest known version
-    return {
-      version: "1.0.0",
-      downloadUrl:
-        "https://github.com/helsky-labs/dropvox/releases/download/v1.0.0/DropVox-1.0.0.dmg",
-    };
-  }
+function getLatestRelease() {
+  return {
+    version: CURRENT_VERSION,
+    downloadUrl: DOWNLOAD_DMG,
+  };
 }
 
 function FeatureIcon({ icon }: { icon: string }) {
