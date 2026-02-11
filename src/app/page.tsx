@@ -285,7 +285,7 @@ export default async function LandingPage() {
                 href="/pricing"
                 className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
               >
-                Pricing
+                {t("nav.pricing")}
               </Link>
               <LanguageSwitcher />
               <ThemeToggle />

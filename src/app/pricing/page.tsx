@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -106,6 +107,7 @@ export default async function PricingPage() {
               <span className="font-semibold text-lg">DropVox</span>
             </Link>
             <div className="flex items-center gap-4">
+              <LanguageSwitcher />
               <ThemeToggle />
             </div>
           </div>

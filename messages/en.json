@@ -4,6 +4,7 @@
     "description": "Native macOS app that converts voice messages to text using on-device AI. Works offline, supports 13 languages, Apple Silicon optimized."
   },
   "nav": {
+    "pricing": "Pricing",
     "github": "GitHub"
   },
   "hero": {
