@@ -17,14 +17,13 @@
     "requirements": "Requires macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB for AI models"
   },
   "preview": {
-    "menuBar": "Main Window - Dashboard",
-    "selectAudio": "Select Audio Files...",
-    "pasteClipboard": "Paste from Clipboard (Cmd+V)",
-    "recent": "Recent Transcriptions",
-    "recentMessage1": "\"Hey, can you call me back when...\"",
-    "recentTime1": "2m ago",
-    "recentMessage2": "\"The meeting is scheduled for...\"",
-    "recentTime2": "15m ago"
+    "dashboardAlt": "DropVox main window showing dashboard with quick actions, recent transcriptions, and sidebar navigation",
+    "menuBarAlt": "DropVox menu bar popover showing ready state with Select Files, Paste, and Drop Zone options",
+    "menuBarLabel": "Menu Bar Access",
+    "transcribingAlt": "DropVox menu bar showing active transcription in progress at 99%",
+    "transcribingLabel": "Live Transcription",
+    "popupAlt": "DropVox transcription result popup with completed text and Copy button",
+    "popupLabel": "Instant Results"
   },
   "features": {
     "title": "Everything you need",

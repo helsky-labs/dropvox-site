@@ -375,72 +375,43 @@ export default async function LandingPage() {
           </FadeIn>
         </div>
 
-        {/* App Preview */}
-        <FadeIn delay={500} className="mt-16 max-w-3xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-4">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span className="ml-2 text-sm text-slate-500">{t("preview.menuBar")}</span>
-            </div>
-            <div className="bg-white dark:bg-slate-900 rounded-lg p-4 space-y-3">
-              <div className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors cursor-pointer">
-                <div className="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4 text-indigo-600 dark:text-indigo-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                    />
-                  </svg>
+        {/* App Preview - Dashboard */}
+        <FadeIn delay={500} className="mt-16 max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700">
+            <Image
+              src="/screenshots/dashboard.png"
+              alt={t("preview.dashboardAlt")}
+              width={1200}
+              height={750}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </FadeIn>
+
+        {/* Workflow Gallery */}
+        <FadeIn delay={600} className="mt-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { src: "/screenshots/menu-bar.png", alt: t("preview.menuBarAlt"), label: t("preview.menuBarLabel"), w: 293, h: 294 },
+              { src: "/screenshots/transcribing.png", alt: t("preview.transcribingAlt"), label: t("preview.transcribingLabel"), w: 303, h: 331 },
+              { src: "/screenshots/transcription-popup.png", alt: t("preview.popupAlt"), label: t("preview.popupLabel"), w: 424, h: 308 },
+            ].map((item) => (
+              <div key={item.src} className="rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700">
+                <div className="aspect-square bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center p-4">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={item.w}
+                    height={item.h}
+                    className="max-w-full max-h-full w-auto h-auto rounded-lg shadow-md"
+                  />
                 </div>
-                <span className="font-medium">{t("preview.selectAudio")}</span>
-              </div>
-              <div className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800">
-                <div className="w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4 text-green-600 dark:text-green-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                    />
-                  </svg>
-                </div>
-                <span className="font-medium">{t("preview.pasteClipboard")}</span>
-              </div>
-              <div className="border-t border-slate-200 dark:border-slate-700 pt-3">
-                <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">
-                  {t("preview.recent")}
-                </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between items-center text-slate-600 dark:text-slate-400">
-                    <span className="truncate">
-                      {t("preview.recentMessage1")}
-                    </span>
-                    <span className="text-xs text-slate-400">{t("preview.recentTime1")}</span>
-                  </div>
-                  <div className="flex justify-between items-center text-slate-600 dark:text-slate-400">
-                    <span className="truncate">
-                      {t("preview.recentMessage2")}
-                    </span>
-                    <span className="text-xs text-slate-400">{t("preview.recentTime2")}</span>
-                  </div>
+                <div className="px-3 py-2 bg-slate-50 dark:bg-slate-800 text-center">
+                  <span className="text-xs font-medium text-slate-600 dark:text-slate-400">{item.label}</span>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </FadeIn>
       </section>

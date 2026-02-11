@@ -17,14 +17,13 @@
     "requirements": "Requer macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB para modelos de IA"
   },
   "preview": {
-    "menuBar": "Janela Principal - Dashboard",
-    "selectAudio": "Selecionar Arquivos de Áudio...",
-    "pasteClipboard": "Colar da Área de Transferência (Cmd+V)",
-    "recent": "Transcrições Recentes",
-    "recentMessage1": "\"Oi, pode me ligar quando...\"",
-    "recentTime1": "2min atrás",
-    "recentMessage2": "\"A reunião está marcada para...\"",
-    "recentTime2": "15min atrás"
+    "dashboardAlt": "Janela principal do DropVox mostrando dashboard com ações rápidas, transcrições recentes e navegação lateral",
+    "menuBarAlt": "Popover do menu bar do DropVox mostrando estado pronto com opções Selecionar Arquivos, Colar e Zona de Arraste",
+    "menuBarLabel": "Acesso via Menu Bar",
+    "transcribingAlt": "Menu bar do DropVox mostrando transcrição ativa em progresso a 99%",
+    "transcribingLabel": "Transcrição ao Vivo",
+    "popupAlt": "Popup de resultado do DropVox com texto transcrito e botão Copiar",
+    "popupLabel": "Resultados Instantâneos"
   },
   "features": {
     "title": "Tudo que você precisa",
