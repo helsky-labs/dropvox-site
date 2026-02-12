@@ -1,3 +1,5 @@
+import { CURRENT_VERSION } from "@/lib/version";
+
 export function JsonLd() {
   const baseUrl = "https://dropvox.app";
 
@@ -30,7 +32,7 @@ export function JsonLd() {
     ],
     description:
       "Native macOS app for transcribing WhatsApp voice messages and audio files using WhisperKit AI. Features full app window, menu bar access, floating drop zone, and history browser. 100% private and offline.",
-    softwareVersion: "1.1.0",
+    softwareVersion: CURRENT_VERSION,
     downloadUrl: `${baseUrl}`,
     screenshot: `${baseUrl}/icon.png`,
     author: {

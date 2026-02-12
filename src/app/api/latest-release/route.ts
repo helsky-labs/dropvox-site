@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-
-const CURRENT_VERSION = "1.1.0";
+import { CURRENT_VERSION } from "@/lib/version";
 
 export async function GET() {
   return NextResponse.json({

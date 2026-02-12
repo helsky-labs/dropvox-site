@@ -7,9 +7,7 @@ import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { CopyPixButton, PIX_KEY } from "@/components/ui/CopyPixButton";
 import { DownloadButton } from "@/components/ui/DownloadButton";
 import { OutboundLink } from "@/components/ui/OutboundLink";
-
-const CURRENT_VERSION = "1.1.0";
-const DOWNLOAD_DMG = `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
+import { CURRENT_VERSION, DOWNLOAD_DMG } from "@/lib/version";
 
 function getLatestRelease() {
   return {

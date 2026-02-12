@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
-
-const CURRENT_VERSION = "1.1.0";
-
-function getDownloadUrl() {
-  return `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
-}
+import { DOWNLOAD_DMG } from "@/lib/version";
 
 export default async function SuccessPage() {
-  const downloadUrl = await getDownloadUrl();
+  const downloadUrl = DOWNLOAD_DMG;
 
   return (
     <div className="min-h-screen flex flex-col">
