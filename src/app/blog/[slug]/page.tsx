@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getPostSlugs, getAllPosts } from "@/lib/blog";
+import { BlogPostTracker } from "@/components/ui/BlogPostTracker";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -95,6 +96,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
+      <BlogPostTracker slug={slug} title={post.title} />
       <BlogJsonLd post={post} />
 
       {/* Navigation */}

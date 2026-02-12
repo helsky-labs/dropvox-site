@@ -2,6 +2,7 @@
 
 import { useTheme } from '@/components/providers/ThemeProvider'
 import { cn } from '@/lib/utils'
+import { trackEvent, ANALYTICS_EVENTS } from '@/lib/analytics'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -9,7 +10,7 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center gap-1 p-1 rounded-lg bg-slate-100 dark:bg-slate-700">
       <button
-        onClick={() => setTheme('light')}
+        onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'light' }); setTheme('light') }}
         className={cn(
           'p-1.5 rounded-md transition-all duration-200',
           theme === 'light'
@@ -28,7 +29,7 @@ export function ThemeToggle() {
         </svg>
       </button>
       <button
-        onClick={() => setTheme('dark')}
+        onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'dark' }); setTheme('dark') }}
         className={cn(
           'p-1.5 rounded-md transition-all duration-200',
           theme === 'dark'
@@ -47,7 +48,7 @@ export function ThemeToggle() {
         </svg>
       </button>
       <button
-        onClick={() => setTheme('system')}
+        onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'system' }); setTheme('system') }}
         className={cn(
           'p-1.5 rounded-md transition-all duration-200',
           theme === 'system'

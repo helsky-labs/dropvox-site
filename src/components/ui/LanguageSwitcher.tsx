@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useLocale } from "next-intl";
 import type { Locale } from "@/i18n/request";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 const localeNames: Record<Locale, string> = {
   en: "EN",
@@ -14,6 +15,7 @@ export function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (newLocale: Locale) => {
+    trackEvent(ANALYTICS_EVENTS.LANGUAGE_CHANGED, { language: newLocale });
     startTransition(() => {
       // Set cookie for locale preference
       document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=31536000`;

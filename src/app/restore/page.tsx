@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 export default function RestorePage() {
   const t = useTranslations("restorePage");
@@ -28,6 +29,7 @@ export default function RestorePage() {
         throw new Error("Request failed");
       }
 
+      trackEvent(ANALYTICS_EVENTS.RESTORE_SUBMITTED);
       setSubmitted(true);
     } catch {
       setError(t("error"));

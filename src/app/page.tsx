@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { CopyPixButton, PIX_KEY } from "@/components/ui/CopyPixButton";
 import { DownloadButton } from "@/components/ui/DownloadButton";
+import { OutboundLink } from "@/components/ui/OutboundLink";
 
 const CURRENT_VERSION = "1.0.0";
 const DOWNLOAD_DMG = `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
@@ -674,14 +675,13 @@ export default async function LandingPage() {
             />
             <span className="text-sm text-slate-600 dark:text-slate-400">
               {t("footer.builtBy")}{" "}
-              <a
+              <OutboundLink
                 href="https://github.com/helrabelo"
-                target="_blank"
-                rel="noopener noreferrer"
+                location="footer"
                 className="text-indigo-600 dark:text-indigo-400 hover:underline"
               >
                 Hel Rabelo
-              </a>
+              </OutboundLink>
             </span>
           </div>
           <div className="flex items-center gap-6 text-sm text-slate-500">

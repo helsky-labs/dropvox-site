@@ -28,4 +28,10 @@ export const ANALYTICS_EVENTS = {
 
   // Language
   LANGUAGE_CHANGED: "language_changed",
+
+  // Content & Interactions
+  BLOG_POST_READ: "blog_post_read",
+  RESTORE_SUBMITTED: "restore_submitted",
+  THEME_CHANGED: "theme_changed",
+  OUTBOUND_LINK: "outbound_link",
 } as const;
