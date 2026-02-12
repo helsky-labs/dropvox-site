@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>DropVox</title>
+        <item>
+            <title>1.2.0</title>
+            <pubDate>Thu, 12 Feb 2026 12:52:54 +0000</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/helsky-labs/dropvox/releases/download/v1.2.0/DropVox-1.2.0.dmg" length="2730582" type="application/octet-stream" sparkle:edSignature="5Xu0ooy8CA2ZGkT33v3pFasP7+9qqyYi9ILnOP2nfrVWNis7URvUuOQdlhd0+T+UAH7HTSFQlZpHai30UFjvDw=="/>
+        </item>
+    </channel>
+</rss>
