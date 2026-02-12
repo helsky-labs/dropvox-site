@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const CURRENT_VERSION = "1.0.0";
+const CURRENT_VERSION = "1.1.0";
 
 function getDownloadUrl() {
   return `/downloads/DropVox-${CURRENT_VERSION}.dmg`;

@@ -8,7 +8,7 @@ import { CopyPixButton, PIX_KEY } from "@/components/ui/CopyPixButton";
 import { DownloadButton } from "@/components/ui/DownloadButton";
 import { OutboundLink } from "@/components/ui/OutboundLink";
 
-const CURRENT_VERSION = "1.0.0";
+const CURRENT_VERSION = "1.1.0";
 const DOWNLOAD_DMG = `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
 
 function getLatestRelease() {
