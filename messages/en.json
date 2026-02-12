@@ -8,7 +8,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "Native Swift App - v1.0",
+    "badge": "Native Swift App",
     "title": "Transcribe",
     "titleHighlight": "WhatsApp Audio",
     "titleEnd": "Messages in Seconds",
