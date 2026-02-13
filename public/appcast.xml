@@ -3,12 +3,12 @@
     <channel>
         <title>DropVox</title>
         <item>
-            <title>1.2.3</title>
-            <pubDate>Fri, 13 Feb 2026 00:22:35 +0000</pubDate>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
+            <title>1.2.4</title>
+            <pubDate>Fri, 13 Feb 2026 12:08:03 +0000</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/helsky-labs/dropvox/releases/download/v1.2.3/DropVox-1.2.3.dmg" length="3959146" type="application/octet-stream" sparkle:edSignature="HKAcoJKfS5pThDgVUdLIgzVKhGQDrmRbvPx8n3XaNRsxkCIOgDcAhYUEh6hdw8NT6aue2lMiXfjkovC5FPY3Bw=="/>
+            <enclosure url="https://github.com/helsky-labs/dropvox/releases/download/v1.2.4/DropVox-1.2.4.dmg" length="3846797" type="application/octet-stream" sparkle:edSignature="KtK3NBAcVJka8VGZkQibD4P8nLqqYzGFZy19MrtqISilbN16y8Jer00J3SzGQ10izG3Li0Ekj+ciSkF5Jn3CDA=="/>
         </item>
     </channel>
 </rss>
