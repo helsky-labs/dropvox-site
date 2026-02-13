@@ -31,11 +31,19 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid email format" }, { status: 400 });
     }
 
+    const normalizedEmail = email.toLowerCase().trim();
+
     // Look up licenses by email
-    const { data: licenses } = await supabase
+    const { data: licenses, error: dbError } = await supabase
       .from("licenses")
       .select("license_key, major_version, created_at")
-      .eq("email", email.toLowerCase().trim());
+      .eq("email", normalizedEmail);
+
+    if (dbError) {
+      console.error("Restore DB error:", dbError);
+    }
+
+    console.log(`Restore request for ${normalizedEmail}: found ${licenses?.length ?? 0} license(s)`);
 
     // Always return success to avoid revealing whether email exists
     if (licenses && licenses.length > 0) {
@@ -51,9 +59,9 @@ export async function POST(request: NextRequest) {
         )
         .join("");
 
-      await resend.emails.send({
+      const { data: emailData, error: emailError } = await resend.emails.send({
         from: "DropVox <noreply@dropvox.app>",
-        to: email.toLowerCase().trim(),
+        to: normalizedEmail,
         subject: "Your DropVox License Key(s)",
         html: `
           <h1>Your DropVox License(s)</h1>
@@ -69,6 +77,12 @@ export async function POST(request: NextRequest) {
           <p>Questions? Reply to this email.</p>
         `,
       });
+
+      if (emailError) {
+        console.error("Resend error:", emailError);
+      } else {
+        console.log("Resend success, email ID:", emailData?.id);
+      }
     }
 
     // Always return success
