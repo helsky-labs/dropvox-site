@@ -129,6 +129,10 @@ export default async function SupportPage() {
                     question={t("faq.license.lost.q")}
                     answer={t("faq.license.lost.a")}
                   />
+                  <FaqItem
+                    question={t("faq.license.upgrade.q")}
+                    answer={t("faq.license.upgrade.a")}
+                  />
                 </div>
               </div>
 
@@ -149,6 +153,10 @@ export default async function SupportPage() {
                   <FaqItem
                     question={t("faq.technical.privacy.q")}
                     answer={t("faq.technical.privacy.a")}
+                  />
+                  <FaqItem
+                    question={t("faq.technical.audioAccess.q")}
+                    answer={t("faq.technical.audioAccess.a")}
                   />
                 </div>
               </div>

@@ -222,6 +222,10 @@
         "lost": {
           "q": "Perdi minha chave de licença",
           "a": "Visite a página de Restaurar Licença e insira o email que usou na compra. Enviaremos sua(s) chave(s) de licença para esse email."
+        },
+        "upgrade": {
+          "q": "O que acontece quando a v2 for lançada?",
+          "a": "Sua licença Pro cobre todas as atualizações v1.x gratuitamente. Quando a v2 for lançada com novos recursos importantes, usuários Pro existentes terão um preço com desconto. Nunca vamos remover recursos que você já pagou."
         }
       },
       "technical": {
@@ -237,6 +241,10 @@
         "privacy": {
           "q": "Meu áudio é enviado para a nuvem?",
           "a": "Não. Toda transcrição acontece localmente no seu Mac usando WhisperKit. Seus arquivos de áudio nunca saem do seu dispositivo. Veja nossa Política de Privacidade para detalhes completos."
+        },
+        "audioAccess": {
+          "q": "O DropVox ou a Helsky Labs acessa meu áudio?",
+          "a": "Nunca. Todo processamento acontece localmente no seu Mac. Não temos nenhum acesso aos seus arquivos de áudio, transcrições ou quaisquer outros dados no seu dispositivo. O DropVox nem tem capacidade de rede para transferência de áudio."
         }
       }
     },
@@ -360,6 +368,22 @@
       "q9": {
         "question": "Como verifico se meu Mac é compatível?",
         "answer": "Clique no menu Apple > Sobre Este Mac. Se o chip diz M1, M2, M3, M4 (ou qualquer variante como M1 Pro, M2 Max, etc.), está tudo certo. Se diz Intel, o DropVox não funcionará na sua máquina. Você também precisa do macOS 14 Sonoma ou posterior."
+      },
+      "q10": {
+        "question": "O DropVox funciona offline?",
+        "answer": "Sim! Após o download inicial do modelo, toda transcrição acontece localmente no seu Mac. Não precisa de internet. Você pode transcrever no avião, no metrô ou em qualquer lugar sem Wi-Fi."
+      },
+      "q11": {
+        "question": "Posso usar o DropVox em várias máquinas?",
+        "answer": "Sim. Cada licença Pro pode ser ativada em até 3 máquinas. Se precisar mover sua licença para um novo Mac, você pode desativá-la na máquina antiga ou entrar em contato com o suporte."
+      },
+      "q12": {
+        "question": "O que acontece quando a v2 for lançada?",
+        "answer": "Sua licença Pro cobre todas as atualizações v1.x gratuitamente. Quando a v2 for lançada com novos recursos importantes, usuários Pro existentes terão um desconto na atualização. Nunca vamos remover recursos que você já pagou."
+      },
+      "q13": {
+        "question": "Vocês acessam meus arquivos de áudio?",
+        "answer": "Nunca. DropVox processa tudo localmente usando WhisperKit AI. Seus arquivos de áudio nunca saem do seu Mac. Não temos nenhum acesso às suas gravações ou transcrições. Veja nossa Política de Privacidade para mais detalhes."
       }
     },
     "footer": {

@@ -222,6 +222,10 @@
         "lost": {
           "q": "I lost my license key",
           "a": "Visit the Restore License page and enter the email you used during purchase. We'll send your license key(s) to that email."
+        },
+        "upgrade": {
+          "q": "What happens when v2 is released?",
+          "a": "Your Pro license covers all v1.x updates for free. When v2 releases with major new features, existing Pro users will get a discounted upgrade price. We'll never remove features you already paid for."
         }
       },
       "technical": {
@@ -237,6 +241,10 @@
         "privacy": {
           "q": "Is my audio sent to the cloud?",
           "a": "No. All transcription happens locally on your Mac using WhisperKit. Your audio files never leave your device. See our Privacy Policy for full details."
+        },
+        "audioAccess": {
+          "q": "Does DropVox or Helsky Labs access my audio?",
+          "a": "Never. All processing happens locally on your Mac. We have zero access to your audio files, transcriptions, or any other data on your device. DropVox doesn't even have networking capabilities for audio transfer."
         }
       }
     },
@@ -360,6 +368,22 @@
       "q9": {
         "question": "Can I check if my Mac is compatible?",
         "answer": "Click the Apple menu > About This Mac. If the chip says M1, M2, M3, M4 (or any variant like M1 Pro, M2 Max, etc.), you're good. If it says Intel, DropVox won't work on your machine. You also need macOS 14 Sonoma or later."
+      },
+      "q10": {
+        "question": "Will DropVox work offline?",
+        "answer": "Yes! After the initial model download, all transcription happens locally on your Mac. No internet required. You can transcribe on a plane, in the subway, or anywhere without Wi-Fi."
+      },
+      "q11": {
+        "question": "Can I use DropVox on multiple machines?",
+        "answer": "Yes. Each Pro license can be activated on up to 3 machines. If you need to move your license to a new Mac, you can deactivate it from the old one or contact support."
+      },
+      "q12": {
+        "question": "What happens when v2 releases?",
+        "answer": "Your Pro license covers all v1.x updates for free. When v2 releases with major new features, existing Pro users will get a discounted upgrade. We'll never take away features you already paid for."
+      },
+      "q13": {
+        "question": "Do you access my audio files?",
+        "answer": "Never. DropVox processes everything locally using WhisperKit AI. Your audio files never leave your Mac. We have zero access to your recordings or transcriptions. See our Privacy Policy for full details."
       }
     },
     "footer": {

@@ -84,7 +84,7 @@ export default async function PricingPage() {
     t("pro.feature7"),
   ];
 
-  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"] as const;
+  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12", "q13"] as const;
   const faqs = faqKeys.map((key) => ({
     question: t(`faq.${key}.question`),
     answer: t(`faq.${key}.answer`),
