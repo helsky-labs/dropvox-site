@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Step-by-step guide to transcribing WhatsApp voice messages on Mac. Private, offline, using local AI. No cloud uploads needed.",
     date: "2026-02-11",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "8 min read",
     tags: ["whatsapp", "transcription", "mac", "guide", "privacy"],
     content: `
@@ -128,7 +128,7 @@ The shift toward local AI processing is not just a privacy preference. It is a f
 
 **Cost efficiency**: One-time purchase versus recurring subscriptions. The math is simple.
 
-I built DropVox as part of [Helsky Labs](https://helrabelo.dev/blog/from-zero-to-two-shipped-apps), my indie software studio, because I was tired of the tradeoffs that existing tools forced. You should not have to choose between convenience and privacy. With Apple Silicon and WhisperKit, you do not have to.
+I built DropVox as part of [Helsky Labs](https://helsky-labs.com), my indie software studio, because I was tired of the tradeoffs that existing tools forced. You should not have to choose between convenience and privacy. With Apple Silicon and WhisperKit, you do not have to.
 
 ## Getting the Best Results
 
@@ -153,7 +153,7 @@ DropVox makes this effortless on Mac. Download it from [dropvox.app](https://dro
     description:
       "Curated list of Mac productivity apps in 2026 that are actually worth paying for. Native, fast, privacy-focused.",
     date: "2026-02-09",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "10 min read",
     tags: ["mac", "productivity", "apps", "apple-silicon", "tools"],
     content: `
@@ -229,7 +229,7 @@ Seven color-coded text scratchpads in your menu bar. It sounds simple because it
 
 ### TokenCentric - Free (open source)
 
-[TokenCentric](https://tokencentric.app) is a developer tool for managing API tokens and credentials locally. If you work with LLM APIs, cloud services, or any tools that require token management, it keeps everything organized without sending your secrets to the cloud. I built this as part of the same [indie hacker journey](https://helrabelo.dev/blog/from-zero-to-two-shipped-apps) as DropVox.
+[TokenCentric](https://tokencentric.app) is a developer tool for managing API tokens and credentials locally. If you work with LLM APIs, cloud services, or any tools that require token management, it keeps everything organized without sending your secrets to the cloud. I built this as part of the same [indie hacker journey](https://helsky-labs.com) as DropVox.
 
 ### Warp - Free (individual)
 
@@ -315,7 +315,7 @@ Start with the free tier, add tools as you hit real friction points in your work
     description:
       "How DropVox uses local AI (WhisperKit + Apple Neural Engine) for 100% private audio transcription on Mac. No cloud, no uploads.",
     date: "2026-02-07",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "9 min read",
     tags: ["privacy", "ai", "whisperkit", "apple-silicon", "local-ai"],
     content: `
@@ -428,7 +428,7 @@ What makes this moment interesting is the trajectory. Apple Silicon Macs get mor
 
 The gap between cloud and local AI quality is closing rapidly. In many practical scenarios, it has already closed. A Small or Medium WhisperKit model running on an M-series Mac produces transcriptions that are indistinguishable from cloud service output for standard audio.
 
-This is why I built DropVox as part of [Helsky Labs](https://helrabelo.dev/blog/from-zero-to-two-shipped-apps). The technology is ready for local-first AI tools that do not compromise on quality. [TokenCentric](https://tokencentric.app) follows the same philosophy for developers who want local-first credential management. The pattern is the same: powerful functionality that respects the user by keeping their data under their control.
+This is why I built DropVox as part of [Helsky Labs](https://helsky-labs.com). The technology is ready for local-first AI tools that do not compromise on quality. [TokenCentric](https://tokencentric.app) follows the same philosophy for developers who want local-first credential management. The pattern is the same: powerful functionality that respects the user by keeping their data under their control.
 
 ## Conclusion
 
@@ -445,7 +445,7 @@ That is how transcription should work. Download DropVox from [dropvox.app](https
     description:
       "Learn how to easily transcribe WhatsApp voice messages on your Mac using DropVox. A step-by-step guide to converting audio to text locally and privately.",
     date: "2025-01-15",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "5 min read",
     tags: ["whatsapp", "transcription", "mac", "tutorial"],
     content: `
@@ -535,7 +535,7 @@ Download DropVox today and take control of your audio transcriptions.
     description:
       "Compare the top Whisper-based transcription apps for macOS. Find out which local AI transcription tool is right for your needs.",
     date: "2025-01-10",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "7 min read",
     tags: ["whisper", "mac", "comparison", "ai"],
     content: `
@@ -652,7 +652,7 @@ Try DropVox today and see how local AI transcription can fit into your workflow.
     description:
       "Why privacy matters for audio transcription and how to keep your voice data secure with local AI tools like DropVox.",
     date: "2025-01-05",
-    author: "Hel Rabelo",
+    author: "Helsky Labs",
     readingTime: "6 min read",
     tags: ["privacy", "security", "offline", "guide"],
     content: `

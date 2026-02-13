@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "native swift app",
     "on-device ai",
   ],
-  authors: [{ name: "Hel Rabelo" }],
-  creator: "Hel Rabelo",
-  publisher: "Hel Rabelo",
+  authors: [{ name: "Helsky Labs" }],
+  creator: "Helsky Labs",
+  publisher: "Helsky Labs",
   applicationName: "DropVox",
   category: "Utilities",
   alternates: {

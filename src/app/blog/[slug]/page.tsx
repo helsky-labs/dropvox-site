@@ -57,7 +57,7 @@ function BlogJsonLd({ post }: { post: NonNullable<ReturnType<typeof getPostBySlu
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://github.com/helrabelo",
+      url: "https://helsky-labs.com",
     },
     publisher: {
       "@type": "Organization",

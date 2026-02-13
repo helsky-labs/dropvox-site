@@ -22,11 +22,11 @@ export function Footer() {
           <span className="text-sm text-slate-600 dark:text-slate-400">
             {t('builtBy')}{' '}
             <OutboundLink
-              href="https://github.com/helrabelo"
+              href="https://helsky-labs.com"
               location="footer"
               className="text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              Hel Rabelo
+              Helsky Labs
             </OutboundLink>
           </span>
         </div>

@@ -36,12 +36,14 @@ export function JsonLd() {
     downloadUrl: `${baseUrl}`,
     screenshot: `${baseUrl}/icon.png`,
     author: {
-      "@type": "Person",
-      name: "Hel Rabelo",
+      "@type": "Organization",
+      name: "Helsky Labs",
+      url: "https://helsky-labs.com",
     },
     publisher: {
-      "@type": "Person",
-      name: "Hel Rabelo",
+      "@type": "Organization",
+      name: "Helsky Labs",
+      url: "https://helsky-labs.com",
     },
     featureList: [
       "WhisperKit AI transcription optimized for Apple Silicon",
@@ -63,15 +65,16 @@ export function JsonLd() {
     description:
       "DropVox is a native macOS app that transcribes WhatsApp voice messages and audio files using WhisperKit AI.",
     publisher: {
-      "@type": "Person",
-      name: "Hel Rabelo",
+      "@type": "Organization",
+      name: "Helsky Labs",
+      url: "https://helsky-labs.com",
     },
   };
 
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "DropVox",
+    name: "Helsky Labs",
     url: baseUrl,
     logo: `${baseUrl}/icon.png`,
   };
