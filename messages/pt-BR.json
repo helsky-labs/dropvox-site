@@ -287,6 +287,28 @@
     "helpLink": "Obter ajuda",
     "copyright": "DropVox. Todos os direitos reservados."
   },
+  "testimonials": {
+    "title": "O que os usuários dizem",
+    "subtitle": "Junte-se a centenas de usuários que economizam tempo todos os dias com o DropVox.",
+    "t1": {
+      "quote": "Recebo dezenas de mensagens de voz no WhatsApp diariamente. O DropVox me economiza pelo menos 30 minutos por dia. A qualidade da transcrição com o modelo Medium é incrível.",
+      "name": "Maria S.",
+      "role": "Gerente de Marketing",
+      "initials": "MS"
+    },
+    "t2": {
+      "quote": "Finalmente um app que respeita minha privacidade. Tudo roda localmente no meu Mac, sem nuvem. O preço único é uma pechincha comparado a alternativas por assinatura.",
+      "name": "James T.",
+      "role": "Engenheiro de Software",
+      "initials": "JT"
+    },
+    "t3": {
+      "quote": "A zona de arraste é fantástica. Deixo flutuando na área de trabalho e só arrasto os arquivos de áudio. Os resultados são instantâneos e copiados automaticamente.",
+      "name": "Ana L.",
+      "role": "Criadora de Conteúdo",
+      "initials": "AL"
+    }
+  },
   "pricingPage": {
     "title": "Preços",
     "description": "Escolha o plano ideal para suas transcrições com DropVox",

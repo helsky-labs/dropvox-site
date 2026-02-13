@@ -287,6 +287,28 @@
     "helpLink": "Get help",
     "copyright": "DropVox. All rights reserved."
   },
+  "testimonials": {
+    "title": "What users are saying",
+    "subtitle": "Join hundreds of users who save time every day with DropVox.",
+    "t1": {
+      "quote": "I get dozens of WhatsApp voice messages daily. DropVox saves me at least 30 minutes every day. The transcription quality with the Medium model is incredible.",
+      "name": "Maria S.",
+      "role": "Marketing Manager",
+      "initials": "MS"
+    },
+    "t2": {
+      "quote": "Finally, an app that respects my privacy. Everything runs locally on my Mac, no cloud nonsense. The one-time price is a steal compared to subscription alternatives.",
+      "name": "James T.",
+      "role": "Software Engineer",
+      "initials": "JT"
+    },
+    "t3": {
+      "quote": "The drop zone feature is a game changer. I keep it floating on my desktop and just drag audio files in. Results are instant and auto-copied to clipboard.",
+      "name": "Ana L.",
+      "role": "Content Creator",
+      "initials": "AL"
+    }
+  },
   "pricingPage": {
     "title": "Pricing",
     "description": "Choose the right plan for your transcriptions with DropVox",
