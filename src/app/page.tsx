@@ -473,6 +473,64 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      {/* Why DropVox Comparison */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800/50">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+              {t("comparison.title")}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+              {t("comparison.subtitle")}
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {(["privacyFirst", "oneTimePrice", "whatsappOptimized", "nativeSwift"] as const).map((key, index) => (
+              <FadeIn key={key} delay={index * 100}>
+                <div className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+                  <h3 className="font-semibold text-lg mb-4">
+                    {t(`comparison.${key}.title`)}
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 mt-0.5">
+                        <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+                          {t("comparison.dropvoxLabel")}
+                        </span>
+                        <p className="text-sm text-slate-700 dark:text-slate-300 mt-0.5">
+                          {t(`comparison.${key}.dropvox`)}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 mt-0.5">
+                        <svg className="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">
+                          {t("comparison.othersLabel")}
+                        </span>
+                        <p className="text-sm text-slate-500 mt-0.5">
+                          {t(`comparison.${key}.others`)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Privacy Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto text-center">

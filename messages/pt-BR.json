@@ -287,6 +287,32 @@
     "helpLink": "Obter ajuda",
     "copyright": "DropVox. Todos os direitos reservados."
   },
+  "comparison": {
+    "title": "Por que DropVox?",
+    "subtitle": "Veja como o DropVox se compara a outras ferramentas de transcrição.",
+    "privacyFirst": {
+      "title": "Privacidade em Primeiro",
+      "dropvox": "100% processamento local. Seu áudio nunca sai do seu Mac. Sem nuvem, sem contas.",
+      "others": "A maioria das alternativas envia áudio para servidores na nuvem para processamento."
+    },
+    "oneTimePrice": {
+      "title": "Preço Único",
+      "dropvox": "Pague uma vez (R$49,90), use para sempre. Sem taxas recorrentes. Todas as atualizações v1.x incluídas.",
+      "others": "Concorrentes cobram R$25-75/mês. Isso é R$300-900/ano pelos mesmos recursos."
+    },
+    "whatsappOptimized": {
+      "title": "Otimizado para WhatsApp",
+      "dropvox": "Suporte nativo a .opus — o formato que o WhatsApp usa. Sem necessidade de conversão. Só arrastar e soltar.",
+      "others": "A maioria das ferramentas não suporta .opus, exigindo conversão manual do áudio."
+    },
+    "nativeSwift": {
+      "title": "App Swift Nativo",
+      "dropvox": "Construído com SwiftUI para macOS. Leve, rápido, integra com menu bar e atalhos do sistema.",
+      "others": "Muitas alternativas são web wrappers Electron que consomem mais memória e bateria."
+    },
+    "dropvoxLabel": "DropVox",
+    "othersLabel": "Outros"
+  },
   "newsletter": {
     "title": "Fique por dentro",
     "description": "Receba notificações sobre novos recursos, dicas e ofertas especiais. Sem spam, cancele quando quiser.",
