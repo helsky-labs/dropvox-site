@@ -288,7 +288,11 @@
       "titleHighlight": "transparent",
       "titleEnd": " pricing",
       "subtitle": "Start free with 3 transcriptions per day. Upgrade to Pro for unlimited transcriptions and longer audio files.",
-      "requirements": "Requires macOS 14+ (Sonoma) and Apple Silicon (M1/M2/M3)"
+      "requirements": "Requires macOS 14+ (Sonoma) and Apple Silicon (M1/M2/M3)",
+      "requirementsBadge": {
+        "title": "macOS 14+ (Sonoma) & Apple Silicon (M1/M2/M3/M4) Required",
+        "detail": "DropVox uses WhisperKit, which requires Apple's Neural Engine. Intel Macs are not supported."
+      }
     },
     "free": {
       "name": "Free",
@@ -352,6 +356,10 @@
       "q8": {
         "question": "Do I need an internet connection?",
         "answer": "Internet is only needed to download the AI model initially and to validate your license occasionally. Transcription itself works completely offline."
+      },
+      "q9": {
+        "question": "Can I check if my Mac is compatible?",
+        "answer": "Click the Apple menu > About This Mac. If the chip says M1, M2, M3, M4 (or any variant like M1 Pro, M2 Max, etc.), you're good. If it says Intel, DropVox won't work on your machine. You also need macOS 14 Sonoma or later."
       }
     },
     "footer": {
