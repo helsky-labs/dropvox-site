@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
         },
       ],
       mode: "payment",
+      allow_promotion_codes: true,
       customer_email: email || undefined,
       success_url: `${process.env.NEXT_PUBLIC_APP_URL || "https://dropvox.app"}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL || "https://dropvox.app"}/pricing`,
