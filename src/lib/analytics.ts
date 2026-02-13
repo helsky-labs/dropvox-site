@@ -29,6 +29,11 @@ export const ANALYTICS_EVENTS = {
   // Language
   LANGUAGE_CHANGED: "language_changed",
 
+  // Conversion Funnel
+  PRICING_PAGE_VIEWED: "pricing_page_viewed",
+  NEWSLETTER_SUBSCRIBED: "newsletter_subscribed",
+  COMPARISON_VIEWED: "comparison_viewed",
+
   // Content & Interactions
   BLOG_POST_READ: "blog_post_read",
   RESTORE_SUBMITTED: "restore_submitted",
