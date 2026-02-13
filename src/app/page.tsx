@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
@@ -154,6 +155,7 @@ function FeatureIcon({ icon }: { icon: string }) {
 }
 
 export default async function LandingPage() {
+  const locale = await getLocale();
   const t = await getTranslations();
   const release = await getLatestRelease();
   const DOWNLOAD_URL = release.downloadUrl;
@@ -649,6 +651,35 @@ export default async function LandingPage() {
             <p className="mt-6 text-sm text-slate-500">
               v{VERSION} • {t("cta.version")}
             </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800/50">
+        <div className="max-w-2xl mx-auto text-center">
+          <FadeIn>
+            <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold mb-2">{t("newsletter.title")}</h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm">
+              {t("newsletter.description")}
+            </p>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <div className="flex justify-center">
+              <NewsletterForm
+                locale={locale}
+                placeholder={t("newsletter.placeholder")}
+                buttonLabel={t("newsletter.button")}
+                submittingLabel={t("newsletter.submitting")}
+                successMessage={t("newsletter.success")}
+                errorMessage={t("newsletter.error")}
+              />
+            </div>
           </FadeIn>
         </div>
       </section>

@@ -287,6 +287,15 @@
     "helpLink": "Obter ajuda",
     "copyright": "DropVox. Todos os direitos reservados."
   },
+  "newsletter": {
+    "title": "Fique por dentro",
+    "description": "Receba notificações sobre novos recursos, dicas e ofertas especiais. Sem spam, cancele quando quiser.",
+    "placeholder": "voce@exemplo.com",
+    "button": "Inscrever-se",
+    "submitting": "Inscrevendo...",
+    "success": "Inscrito! Verifique seu email para confirmação.",
+    "error": "Algo deu errado. Tente novamente."
+  },
   "testimonials": {
     "title": "O que os usuários dizem",
     "subtitle": "Junte-se a centenas de usuários que economizam tempo todos os dias com o DropVox.",

@@ -287,6 +287,15 @@
     "helpLink": "Get help",
     "copyright": "DropVox. All rights reserved."
   },
+  "newsletter": {
+    "title": "Stay in the loop",
+    "description": "Get notified about new features, tips, and special offers. No spam, unsubscribe anytime.",
+    "placeholder": "you@example.com",
+    "button": "Subscribe",
+    "submitting": "Subscribing...",
+    "success": "You're subscribed! Check your email for confirmation.",
+    "error": "Something went wrong. Please try again."
+  },
   "testimonials": {
     "title": "What users are saying",
     "subtitle": "Join hundreds of users who save time every day with DropVox.",
