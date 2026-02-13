@@ -1,9 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { DOWNLOAD_DMG } from "@/lib/version";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("successPage");
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
 export default async function SuccessPage() {
+  const t = await getTranslations("successPage");
   const downloadUrl = DOWNLOAD_DMG;
 
   return (
@@ -49,42 +60,41 @@ export default async function SuccessPage() {
 
           <FadeIn delay={100}>
             <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              Thank you for your purchase!
+              {t("title")}
             </h1>
           </FadeIn>
 
           <FadeIn delay={200}>
             <p className="text-slate-600 dark:text-slate-400 mb-8">
-              Your license key has been sent to your email. Check your inbox
-              (and spam folder) for an email from{" "}
-              <span className="font-medium">noreply@dropvox.app</span>.
+              {t("emailNotice")}{" "}
+              <span className="font-medium">{t("emailSender")}</span>.
             </p>
           </FadeIn>
 
           <FadeIn delay={300}>
             <div className="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 mb-8">
-              <h2 className="font-semibold text-lg mb-4">How to activate:</h2>
+              <h2 className="font-semibold text-lg mb-4">{t("activation.title")}</h2>
               <ol className="text-left text-slate-600 dark:text-slate-400 space-y-3">
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-sm font-medium flex items-center justify-center">
                     1
                   </span>
-                  <span>Open DropVox from your menu bar</span>
+                  <span>{t("activation.step1")}</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-sm font-medium flex items-center justify-center">
                     2
                   </span>
                   <span>
-                    Click <strong>Settings</strong> &rarr;{" "}
-                    <strong>Enter License Key</strong>
+                    <strong>{t("activation.step2Settings")}</strong> &rarr;{" "}
+                    <strong>{t("activation.step2Action")}</strong>
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-sm font-medium flex items-center justify-center">
                     3
                   </span>
-                  <span>Paste your license key and click Activate</span>
+                  <span>{t("activation.step3")}</span>
                 </li>
               </ol>
             </div>
@@ -109,22 +119,22 @@ export default async function SuccessPage() {
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-                Download DropVox
+                {t("downloadButton")}
               </a>
               <p className="text-sm text-slate-500">
-                Didn&apos;t receive your email?{" "}
+                {t("noEmail")}{" "}
                 <Link
                   href="/restore"
                   className="text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  Restore your license
+                  {t("restoreLink")}
                 </Link>
                 {" "}&middot;{" "}
                 <Link
                   href="/support"
                   className="text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  Get help
+                  {t("helpLink")}
                 </Link>
               </p>
             </div>
@@ -136,7 +146,7 @@ export default async function SuccessPage() {
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto text-center">
           <span className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} DropVox. All rights reserved.
+            &copy; {new Date().getFullYear()} {t("copyright")}
           </span>
         </div>
       </footer>

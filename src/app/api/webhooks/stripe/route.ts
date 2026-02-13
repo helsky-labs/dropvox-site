@@ -50,13 +50,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
+  console.log(`[stripe-webhook] Received event: ${event.type}`);
+
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
+    console.log(`[stripe-webhook] payment_status: ${session.payment_status}`);
 
-    if (session.payment_status === "paid") {
+    if (session.payment_status === "paid" || session.payment_status === "no_payment_required") {
       const email = session.customer_email!;
       const customerId = session.customer as string;
-      const paymentIntentId = session.payment_intent as string;
+      const paymentIntentId = (session.payment_intent as string) || null;
 
       // Generate unique license key
       let licenseKey: string;
@@ -90,29 +93,36 @@ export async function POST(request: NextRequest) {
       }
 
       // Send license email
-      await resend.emails.send({
-        from: "DropVox <noreply@dropvox.app>",
-        to: email,
-        subject: "Your DropVox License Key",
-        html: `
-          <h1>Thank you for purchasing DropVox!</h1>
-          <p>Your license key is:</p>
-          <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 24px; text-align: center; margin: 20px 0;">
-            ${licenseKey}
-          </div>
-          <p>To activate:</p>
-          <ol>
-            <li>Open DropVox</li>
-            <li>Click Settings → Enter License Key</li>
-            <li>Paste your key and click Activate</li>
-          </ol>
-          <p>This license is valid for DropVox v1.x on up to 3 machines.</p>
-          <p>Questions? Reply to this email.</p>
-        `,
-      });
+      try {
+        await resend.emails.send({
+          from: "DropVox <noreply@dropvox.app>",
+          to: email,
+          subject: "Your DropVox License Key",
+          html: `
+            <h1>Thank you for purchasing DropVox!</h1>
+            <p>Your license key is:</p>
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 24px; text-align: center; margin: 20px 0;">
+              ${licenseKey}
+            </div>
+            <p>To activate:</p>
+            <ol>
+              <li>Open DropVox</li>
+              <li>Click Settings → Enter License Key</li>
+              <li>Paste your key and click Activate</li>
+            </ol>
+            <p>This license is valid for DropVox v1.x on up to 3 machines.</p>
+            <p>Questions? Reply to this email.</p>
+          `,
+        });
+        console.log(`[stripe-webhook] License email sent to ${email}`);
+      } catch (emailError) {
+        console.error("[stripe-webhook] Failed to send license email:", emailError);
+      }
 
-      console.log("License created successfully");
+      console.log(`[stripe-webhook] License created for ${email}: ${licenseKey}`);
     }
+  } else {
+    console.log(`[stripe-webhook] Unhandled event type: ${event.type}`);
   }
 
   return NextResponse.json({ received: true });

@@ -261,6 +261,24 @@
       "backHome": "Back to home"
     }
   },
+  "successPage": {
+    "title": "Thank you for your purchase!",
+    "description": "Your DropVox Pro License",
+    "emailNotice": "Your license key has been sent to your email. Check your inbox (and spam folder) for an email from",
+    "emailSender": "noreply@dropvox.app",
+    "activation": {
+      "title": "How to activate:",
+      "step1": "Open DropVox from your menu bar",
+      "step2Settings": "Settings",
+      "step2Action": "Enter License Key",
+      "step3": "Paste your license key and click Activate"
+    },
+    "downloadButton": "Download DropVox",
+    "noEmail": "Didn't receive your email?",
+    "restoreLink": "Restore your license",
+    "helpLink": "Get help",
+    "copyright": "DropVox. All rights reserved."
+  },
   "pricingPage": {
     "title": "Pricing",
     "description": "Choose the right plan for your transcriptions with DropVox",

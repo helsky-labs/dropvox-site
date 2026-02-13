@@ -261,6 +261,24 @@
       "backHome": "Voltar para início"
     }
   },
+  "successPage": {
+    "title": "Obrigado pela sua compra!",
+    "description": "Sua Licença DropVox Pro",
+    "emailNotice": "Sua chave de licença foi enviada para seu email. Verifique sua caixa de entrada (e pasta de spam) por um email de",
+    "emailSender": "noreply@dropvox.app",
+    "activation": {
+      "title": "Como ativar:",
+      "step1": "Abra o DropVox pelo menu bar",
+      "step2Settings": "Configurações",
+      "step2Action": "Inserir Chave de Licença",
+      "step3": "Cole sua chave de licença e clique em Ativar"
+    },
+    "downloadButton": "Baixar DropVox",
+    "noEmail": "Não recebeu seu email?",
+    "restoreLink": "Restaurar sua licença",
+    "helpLink": "Obter ajuda",
+    "copyright": "DropVox. Todos os direitos reservados."
+  },
   "pricingPage": {
     "title": "Preços",
     "description": "Escolha o plano ideal para suas transcrições com DropVox",
