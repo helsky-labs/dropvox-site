@@ -31,7 +31,7 @@ export function LanguageSwitcher() {
           key={loc}
           onClick={() => handleChange(loc)}
           disabled={isPending}
-          className={`px-2 py-1 rounded transition-colors ${
+          className={`px-3 py-2 min-h-[44px] rounded transition-colors active:scale-95 ${
             locale === loc
               ? "bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 font-medium"
               : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"

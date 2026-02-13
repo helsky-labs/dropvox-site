@@ -6,7 +6,11 @@
   "nav": {
     "pricing": "Preços",
     "github": "GitHub",
-    "getPro": "Seja Pro"
+    "getPro": "Seja Pro",
+    "blog": "Blog",
+    "support": "Suporte",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "hero": {
     "badge": "App Swift Nativo",
@@ -113,8 +117,12 @@
   },
   "footer": {
     "builtBy": "Feito por",
-    "releases": "Releases",
-    "issues": "Issues"
+    "blog": "Blog",
+    "pricing": "Preços",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "support": "Suporte",
+    "copyright": "Todos os direitos reservados."
   },
   "languageSwitcher": {
     "label": "Idioma"

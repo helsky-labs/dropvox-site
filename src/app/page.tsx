@@ -3,11 +3,10 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { DownloadButton } from "@/components/ui/DownloadButton";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
-import { OutboundLink } from "@/components/ui/OutboundLink";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { CURRENT_VERSION, DOWNLOAD_DMG } from "@/lib/version";
 
 function getLatestRelease() {
@@ -248,39 +247,7 @@ export default async function LandingPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-50/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/icon.png"
-                alt="DropVox"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-lg">DropVox</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link
-                href="/pricing"
-                className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-              >
-                {t("nav.pricing")}
-              </Link>
-              <Link
-                href="/pricing"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-1.5 rounded-full transition-colors"
-              >
-                {t("nav.getPro")}
-              </Link>
-              <LanguageSwitcher />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar showPricing showGetPro />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -849,56 +816,7 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/icon.png"
-              alt="DropVox"
-              width={24}
-              height={24}
-              className="rounded-md"
-            />
-            <span className="text-sm text-slate-600 dark:text-slate-400">
-              {t("footer.builtBy")}{" "}
-              <OutboundLink
-                href="https://github.com/helrabelo"
-                location="footer"
-                className="text-indigo-600 dark:text-indigo-400 hover:underline"
-              >
-                Hel Rabelo
-              </OutboundLink>
-            </span>
-          </div>
-          <div className="flex items-center gap-6 text-sm text-slate-500">
-            <Link
-              href="/blog"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/privacy"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="/terms"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Terms
-            </Link>
-            <Link
-              href="/support"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Support
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

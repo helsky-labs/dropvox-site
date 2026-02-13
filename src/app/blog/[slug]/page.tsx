@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getPostSlugs, getAllPosts } from "@/lib/blog";
 import { BlogPostTracker } from "@/components/ui/BlogPostTracker";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -99,29 +100,7 @@ export default async function BlogPostPage({ params }: Props) {
       <BlogPostTracker slug={slug} title={post.title} />
       <BlogJsonLd post={post} />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-50/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/icon.png"
-                alt="DropVox"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-lg">DropVox</span>
-            </Link>
-            <Link
-              href="/blog"
-              className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-            >
-              Back to Blog
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar showPricing showGetPro />
 
       {/* Article */}
       <article className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
@@ -273,45 +252,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/icon.png"
-              alt="DropVox"
-              width={24}
-              height={24}
-              className="rounded-md"
-            />
-            <span className="text-sm text-slate-600 dark:text-slate-400">
-              Built by{" "}
-              <a
-                href="https://github.com/helrabelo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 dark:text-indigo-400 hover:underline"
-              >
-                Hel Rabelo
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-6 text-sm text-slate-500">
-            <Link
-              href="/"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/blog"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              Blog
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

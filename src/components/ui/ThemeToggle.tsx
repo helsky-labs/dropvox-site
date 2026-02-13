@@ -12,7 +12,7 @@ export function ThemeToggle() {
       <button
         onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'light' }); setTheme('light') }}
         className={cn(
-          'p-1.5 rounded-md transition-all duration-200',
+          'min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md transition-all duration-200 active:scale-95',
           theme === 'light'
             ? 'bg-white dark:bg-slate-600 shadow-sm'
             : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
@@ -31,7 +31,7 @@ export function ThemeToggle() {
       <button
         onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'dark' }); setTheme('dark') }}
         className={cn(
-          'p-1.5 rounded-md transition-all duration-200',
+          'min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md transition-all duration-200 active:scale-95',
           theme === 'dark'
             ? 'bg-white dark:bg-slate-600 shadow-sm'
             : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
@@ -50,7 +50,7 @@ export function ThemeToggle() {
       <button
         onClick={() => { trackEvent(ANALYTICS_EVENTS.THEME_CHANGED, { theme: 'system' }); setTheme('system') }}
         className={cn(
-          'p-1.5 rounded-md transition-all duration-200',
+          'min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md transition-all duration-200 active:scale-95',
           theme === 'system'
             ? 'bg-white dark:bg-slate-600 shadow-sm'
             : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'

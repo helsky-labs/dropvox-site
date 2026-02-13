@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
@@ -93,27 +92,7 @@ export default async function PricingPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-50/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/icon.png"
-                alt="DropVox"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-lg">DropVox</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <LanguageSwitcher />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar showPricing={false} showGetPro={false} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -289,57 +268,7 @@ export default async function PricingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/icon.png"
-              alt="DropVox"
-              width={24}
-              height={24}
-              className="rounded-md"
-            />
-            <span className="text-sm text-slate-600 dark:text-slate-400">
-              {t("footer.builtBy")}{" "}
-              <a
-                href="https://github.com/helrabelo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 dark:text-indigo-400 hover:underline"
-              >
-                Hel Rabelo
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-6 text-sm text-slate-500">
-            <Link
-              href="/"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              {t("footer.home")}
-            </Link>
-            <Link
-              href="/privacy"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              {t("footer.privacy")}
-            </Link>
-            <Link
-              href="/terms"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              {t("footer.terms")}
-            </Link>
-            <Link
-              href="/support"
-              className="hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-            >
-              {t("footer.support")}
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 // NOTE: This is a template Terms of Service. Have a legal professional review before launch.
-import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -12,23 +12,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-50/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/icon.png"
-                alt="DropVox"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-lg">DropVox</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar showPricing showGetPro={false} />
 
       {/* Content */}
       <main className="flex-1 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -263,14 +247,7 @@ export default function TermsPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <span className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} DropVox. All rights reserved.
-          </span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
