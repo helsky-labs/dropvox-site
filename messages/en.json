@@ -329,7 +329,10 @@
       "feature4": "13 languages",
       "feature5": "Full app window & menu bar",
       "feature6": "Priority support",
-      "feature7": "Use on 3 machines"
+      "feature7": "Use on 3 machines",
+      "trustSecure": "Secure checkout via Stripe",
+      "trustGuarantee": "14-day money-back guarantee",
+      "trustOneTime": "One-time payment, no subscription"
     },
     "faq": {
       "title": "Frequently Asked Questions",

@@ -329,7 +329,10 @@
       "feature4": "13 idiomas",
       "feature5": "Janela completa e menu bar",
       "feature6": "Suporte prioritário",
-      "feature7": "Use em 3 máquinas"
+      "feature7": "Use em 3 máquinas",
+      "trustSecure": "Checkout seguro via Stripe",
+      "trustGuarantee": "Garantia de reembolso de 14 dias",
+      "trustOneTime": "Pagamento único, sem assinatura"
     },
     "faq": {
       "title": "Perguntas Frequentes",

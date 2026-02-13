@@ -215,6 +215,9 @@ export default async function PricingPage() {
                   locale={locale}
                   label={t("pro.checkoutButton")}
                   loadingLabel={t("pro.checkoutLoading")}
+                  trustSecure={t("pro.trustSecure")}
+                  trustGuarantee={t("pro.trustGuarantee")}
+                  trustOneTime={t("pro.trustOneTime")}
                 />
                 <ul className="space-y-4">
                   {proFeatures.map((feature, index) => (
