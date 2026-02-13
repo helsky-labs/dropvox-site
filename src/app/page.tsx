@@ -5,8 +5,8 @@ import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
-import { CopyPixButton, PIX_KEY } from "@/components/ui/CopyPixButton";
 import { DownloadButton } from "@/components/ui/DownloadButton";
+import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { OutboundLink } from "@/components/ui/OutboundLink";
 import { CURRENT_VERSION, DOWNLOAD_DMG } from "@/lib/version";
 
@@ -168,6 +168,7 @@ export default async function LandingPage() {
       description: t("features.items.localAI.description"),
       popular: true,
       isNew: false,
+      pro: false,
     },
     {
       icon: "globe",
@@ -175,6 +176,7 @@ export default async function LandingPage() {
       description: t("features.items.languages.description"),
       popular: false,
       isNew: false,
+      pro: false,
     },
     {
       icon: "window",
@@ -182,6 +184,7 @@ export default async function LandingPage() {
       description: t("features.items.fullApp.description"),
       popular: false,
       isNew: true,
+      pro: false,
     },
     {
       icon: "clipboard",
@@ -189,6 +192,7 @@ export default async function LandingPage() {
       description: t("features.items.clipboard.description"),
       popular: true,
       isNew: false,
+      pro: false,
     },
     {
       icon: "dropzone",
@@ -196,6 +200,7 @@ export default async function LandingPage() {
       description: t("features.items.dropZone.description"),
       popular: false,
       isNew: true,
+      pro: false,
     },
     {
       icon: "history",
@@ -203,13 +208,15 @@ export default async function LandingPage() {
       description: t("features.items.history.description"),
       popular: true,
       isNew: false,
+      pro: false,
     },
     {
       icon: "models",
       title: t("features.items.models.title"),
       description: t("features.items.models.description"),
       popular: false,
-      isNew: true,
+      isNew: false,
+      pro: true,
     },
     {
       icon: "lock",
@@ -217,6 +224,7 @@ export default async function LandingPage() {
       description: t("features.items.privacy.description"),
       popular: false,
       isNew: false,
+      pro: false,
     },
   ];
 
@@ -260,6 +268,12 @@ export default async function LandingPage() {
                 className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
               >
                 {t("nav.pricing")}
+              </Link>
+              <Link
+                href="/pricing"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-1.5 rounded-full transition-colors"
+              >
+                {t("nav.getPro")}
               </Link>
               <LanguageSwitcher />
               <ThemeToggle />
@@ -320,30 +334,20 @@ export default async function LandingPage() {
                 </svg>
                 {t("hero.downloadButton")}
               </DownloadButton>
-              <a
-                href="#features"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-medium transition-colors"
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border-2 border-indigo-300 dark:border-indigo-700 hover:border-indigo-400 dark:hover:border-indigo-600 text-indigo-600 dark:text-indigo-400 font-medium transition-colors"
               >
-                {t("hero.featuresButton")}
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
+                {t("hero.proButton")}
+              </Link>
             </div>
+            <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              {t("hero.proHint")}
+            </p>
           </FadeIn>
 
           <FadeIn delay={400}>
-            <p className="mt-6 text-sm text-slate-500 dark:text-slate-500">
+            <p className="mt-4 text-sm text-slate-500 dark:text-slate-500">
               {t("hero.requirements")}
             </p>
           </FadeIn>
@@ -407,14 +411,20 @@ export default async function LandingPage() {
               <FadeIn key={feature.title} delay={index * 100}>
                 <div
                   className={`relative p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border transition-all hover:shadow-lg hover:scale-[1.02] ${
-                    feature.isNew
+                    feature.pro
+                      ? "border-amber-200 dark:border-amber-800"
+                      : feature.isNew
                       ? "border-green-200 dark:border-green-800"
                       : feature.popular
                       ? "border-indigo-200 dark:border-indigo-800"
                       : "border-slate-200 dark:border-slate-700"
                   }`}
                 >
-                  {feature.isNew ? (
+                  {feature.pro ? (
+                    <span className="absolute -top-3 right-4 px-3 py-1 text-xs font-medium bg-amber-500 text-white rounded-full">
+                      {t("features.pro")}
+                    </span>
+                  ) : feature.isNew ? (
                     <span className="absolute -top-3 right-4 px-3 py-1 text-xs font-medium bg-green-600 text-white rounded-full">
                       {t("features.new")}
                     </span>
@@ -424,7 +434,9 @@ export default async function LandingPage() {
                     </span>
                   ) : null}
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    feature.isNew
+                    feature.pro
+                      ? "bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400"
+                      : feature.isNew
                       ? "bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400"
                       : "bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400"
                   }`}>
@@ -528,6 +540,20 @@ export default async function LandingPage() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={400}>
+            <div className="mt-12 text-center">
+              <p className="text-slate-600 dark:text-slate-400 mb-4 font-medium">
+                {t("comparison.ctaText")}
+              </p>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-all hover:scale-105 shadow-lg shadow-indigo-500/25"
+              >
+                {t("comparison.ctaButton")}
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -661,6 +687,87 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      {/* Compact Pricing Comparison */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800/50">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+              {t("homePricing.title")}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+              {t("homePricing.subtitle")}
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* Free Tier */}
+            <FadeIn delay={100}>
+              <div className="p-8 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-full flex flex-col">
+                <h3 className="font-semibold text-xl mb-2">{t("homePricing.free.name")}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">{t("homePricing.free.price")}</span>
+                  <span className="text-slate-500 ml-2">{t("homePricing.free.priceLabel")}</span>
+                </div>
+                <ul className="space-y-3 flex-1">
+                  {(["feature1", "feature2", "feature3"] as const).map((key) => (
+                    <li key={key} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                      <svg className="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {t(`homePricing.free.${key}`)}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8">
+                  <DownloadButton
+                    href={DOWNLOAD_URL}
+                    version={VERSION}
+                    location="home-pricing"
+                    className="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-semibold transition-colors"
+                  >
+                    {t("cta.downloadButton")}
+                  </DownloadButton>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Pro Tier */}
+            <FadeIn delay={200}>
+              <div className="relative p-8 rounded-2xl border-2 border-indigo-500 bg-slate-50 dark:bg-slate-800 h-full flex flex-col">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-semibold bg-indigo-600 text-white rounded-full">
+                  {t("homePricing.pro.badge")}
+                </span>
+                <h3 className="font-semibold text-xl mb-2">{t("homePricing.pro.name")}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">{t("homePricing.pro.price")}</span>
+                  <span className="text-slate-500 ml-2">{t("homePricing.pro.priceLabel")}</span>
+                </div>
+                <ul className="space-y-3 flex-1">
+                  {(["feature1", "feature2", "feature3"] as const).map((key) => (
+                    <li key={key} className="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
+                      <svg className="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {t(`homePricing.pro.${key}`)}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8">
+                  <CheckoutButton
+                    locale={locale}
+                    label={t("pricingPage.pro.checkoutButton")}
+                    loadingLabel={t("pricingPage.pro.checkoutLoading")}
+                    trustSecure={t("pricingPage.pro.trustSecure")}
+                    trustGuarantee={t("pricingPage.pro.trustGuarantee")}
+                    trustOneTime={t("pricingPage.pro.trustOneTime")}
+                  />
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Download CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -675,11 +782,17 @@ export default async function LandingPage() {
 
           <FadeIn delay={100}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-lg transition-all hover:scale-105 shadow-lg shadow-indigo-500/25"
+              >
+                {t("cta.proButton")}
+              </Link>
               <DownloadButton
                 href={DOWNLOAD_URL}
                 version={VERSION}
                 location="cta"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-lg transition-all hover:scale-105 shadow-lg shadow-indigo-500/25"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-medium transition-colors"
               >
                 <svg
                   className="w-5 h-5"
@@ -696,12 +809,6 @@ export default async function LandingPage() {
                 </svg>
                 {t("cta.downloadButton")}
               </DownloadButton>
-              <Link
-                href="/pricing"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-medium transition-colors"
-              >
-                {t("hero.featuresButton")}
-              </Link>
             </div>
           </FadeIn>
 
@@ -736,55 +843,6 @@ export default async function LandingPage() {
                 submittingLabel={t("newsletter.submitting")}
                 successMessage={t("newsletter.success")}
                 errorMessage={t("newsletter.error")}
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-800/30">
-        <div className="max-w-2xl mx-auto text-center">
-          <FadeIn>
-            <div className="text-4xl mb-4">☕</div>
-            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-              {t("support.title")}
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-6">
-              {t("support.description")}
-            </p>
-
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm max-w-sm mx-auto">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <svg
-                  viewBox="0 0 512 512"
-                  className="w-6 h-6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="512" height="512" rx="64" fill="#00D4AA" />
-                  <path
-                    d="M193.8 295.4v73.5h-40.6V143.1h90.4c27.3 0 48.6 7.3 63.8 21.8 15.3 14.5 22.9 33.6 22.9 57.2 0 24-7.5 42.9-22.4 56.8-14.9 13.8-36.1 20.8-63.7 20.8h-50.4v-.3zm0-35.5h49.8c14.3 0 25.3-3.6 32.9-10.9 7.6-7.3 11.4-17.6 11.4-30.8 0-12.9-3.8-23.3-11.3-31.2-7.5-7.9-18.1-11.9-31.8-12H193.8v84.9zm148.6 109h-40.6V143.1h40.6v225.8zm61.3 0l-67.1-105.8v-.6l69.5-119.4h47.1l-72.7 119.4 75 106.4h-47.8z"
-                    fill="white"
-                  />
-                </svg>
-                <span className="font-medium text-slate-900 dark:text-white">
-                  {t("support.pix")}
-                </span>
-              </div>
-
-              <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-3 mb-3">
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">
-                  {t("support.pixKeyLabel")}
-                </p>
-                <p className="font-mono text-slate-900 dark:text-white select-all text-sm break-all">
-                  {PIX_KEY}
-                </p>
-              </div>
-
-              <CopyPixButton
-                label={t("support.copyButton")}
-                copiedLabel={t("support.copiedButton")}
               />
             </div>
           </FadeIn>

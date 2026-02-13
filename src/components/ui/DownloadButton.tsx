@@ -7,7 +7,7 @@ interface DownloadButtonProps {
   version: string;
   children: React.ReactNode;
   className?: string;
-  location: "hero" | "cta" | "how-it-works";
+  location: "hero" | "cta" | "how-it-works" | "home-pricing";
 }
 
 export function DownloadButton({

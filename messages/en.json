@@ -5,7 +5,8 @@
   },
   "nav": {
     "pricing": "Pricing",
-    "github": "GitHub"
+    "github": "GitHub",
+    "getPro": "Get Pro"
   },
   "hero": {
     "badge": "Native Swift App",
@@ -15,6 +16,8 @@
     "description": "DropVox is a native macOS app that converts voice messages to text using WhisperKit AI. Full app window, menu bar access, and floating drop zone. Works offline, supports 13 languages, and never uploads your audio anywhere.",
     "downloadButton": "Download for macOS",
     "featuresButton": "See Features",
+    "proButton": "Get Pro — $9.99",
+    "proHint": "Free to start — Pro unlocks unlimited transcriptions",
     "requirements": "Requires macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB for AI models"
   },
   "preview": {
@@ -31,6 +34,7 @@
     "description": "A complete transcription solution with multiple ways to work: full app window, menu bar, keyboard shortcuts, and drag-and-drop.",
     "popular": "Popular",
     "new": "New",
+    "pro": "Pro",
     "items": {
       "localAI": {
         "title": "WhisperKit AI",
@@ -92,9 +96,10 @@
     "openSource": "Privacy-first design"
   },
   "cta": {
-    "title": "Ready to transcribe?",
-    "description": "Download DropVox and start converting voice messages to text in seconds.",
-    "downloadButton": "Download for macOS",
+    "title": "Ready to go Pro?",
+    "description": "Unlock unlimited transcriptions, all Whisper models, and no audio length limits.",
+    "downloadButton": "Download Free",
+    "proButton": "Get Pro License",
     "githubButton": "View on GitHub",
     "version": "macOS 14+ (Sonoma) • Apple Silicon"
   },
@@ -311,7 +316,9 @@
       "others": "Many alternatives are Electron-based web wrappers that consume more memory and battery."
     },
     "dropvoxLabel": "DropVox",
-    "othersLabel": "Others"
+    "othersLabel": "Others",
+    "ctaText": "One-time price. No subscription. No hidden fees.",
+    "ctaButton": "Get Pro for $9.99"
   },
   "newsletter": {
     "title": "Stay in the loop",
@@ -342,6 +349,27 @@
       "name": "Ana L.",
       "role": "Content Creator",
       "initials": "AL"
+    }
+  },
+  "homePricing": {
+    "title": "Start free. Go Pro when you're ready.",
+    "subtitle": "No commitment required. Try DropVox free, upgrade when you need more.",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "priceLabel": "forever",
+      "feature1": "3 transcriptions per day",
+      "feature2": "60 second max per file",
+      "feature3": "Base Whisper model only"
+    },
+    "pro": {
+      "name": "Pro",
+      "badge": "Most Popular",
+      "price": "$9.99",
+      "priceLabel": "one-time",
+      "feature1": "Unlimited transcriptions",
+      "feature2": "No audio length limit",
+      "feature3": "All 5 Whisper models"
     }
   },
   "pricingPage": {
