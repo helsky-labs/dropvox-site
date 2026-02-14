@@ -19,10 +19,14 @@
     "titleEnd": "Messages in Seconds",
     "description": "DropVox is a native macOS app that converts voice messages to text using WhisperKit AI. Full app window, menu bar access, and floating drop zone. Works offline, supports 13 languages, and never uploads your audio anywhere.",
     "downloadButton": "Download for macOS",
+    "downloadButtonWindows": "Download for Windows",
     "featuresButton": "See Features",
     "proButton": "Get Pro — $9.99",
     "proHint": "Free to start — Pro unlocks unlimited transcriptions",
-    "requirements": "Requires macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB for AI models"
+    "requirements": "Requires macOS 14+ (Sonoma) • Apple Silicon • 75MB-3GB for AI models",
+    "requirementsWindows": "Requires Windows 10+ (x64) • 75MB-3GB for AI models",
+    "alsoAvailableWindows": "Also available for Windows",
+    "alsoAvailableMac": "Also available for macOS"
   },
   "preview": {
     "dashboardAlt": "DropVox main window showing dashboard with quick actions, recent transcriptions, and sidebar navigation",
@@ -103,9 +107,11 @@
     "title": "Ready to go Pro?",
     "description": "Unlock unlimited transcriptions, all Whisper models, and no audio length limits.",
     "downloadButton": "Download Free",
+    "downloadButtonWindows": "Download Free",
     "proButton": "Get Pro License",
     "githubButton": "View on GitHub",
-    "version": "macOS 14+ (Sonoma) • Apple Silicon"
+    "version": "macOS 14+ (Sonoma) • Apple Silicon",
+    "versionWindows": "Windows 10+ (x64)"
   },
   "support": {
     "title": "Find this helpful?",
@@ -393,6 +399,10 @@
       "requirementsBadge": {
         "title": "macOS 14+ (Sonoma) & Apple Silicon (M1/M2/M3/M4) Required",
         "detail": "DropVox uses WhisperKit, which requires Apple's Neural Engine. Intel Macs are not supported."
+      },
+      "requirementsBadgeWindows": {
+        "title": "Windows 10+ (x64) Required",
+        "detail": "DropVox for Windows uses Whisper.net (whisper.cpp) and runs on any modern x64 Windows PC."
       }
     },
     "free": {

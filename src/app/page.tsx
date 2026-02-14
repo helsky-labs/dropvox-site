@@ -7,12 +7,14 @@ import { DownloadButton } from "@/components/ui/DownloadButton";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CURRENT_VERSION, DOWNLOAD_DMG } from "@/lib/version";
+import { CURRENT_VERSION, DOWNLOAD_DMG, DOWNLOAD_WIN } from "@/lib/version";
+import { PlatformRequirements } from "@/components/ui/PlatformRequirements";
 
 function getLatestRelease() {
   return {
     version: CURRENT_VERSION,
-    downloadUrl: DOWNLOAD_DMG,
+    macosUrl: DOWNLOAD_DMG,
+    windowsUrl: DOWNLOAD_WIN,
   };
 }
 
@@ -156,8 +158,7 @@ function FeatureIcon({ icon }: { icon: string }) {
 export default async function LandingPage() {
   const locale = await getLocale();
   const t = await getTranslations();
-  const release = await getLatestRelease();
-  const DOWNLOAD_URL = release.downloadUrl;
+  const release = getLatestRelease();
   const VERSION = release.version;
 
   const features = [
@@ -281,24 +282,12 @@ export default async function LandingPage() {
           <FadeIn delay={300}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <DownloadButton
-                href={DOWNLOAD_URL}
+                macosHref={release.macosUrl}
+                windowsHref={release.windowsUrl}
                 version={VERSION}
                 location="hero"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-lg transition-all hover:scale-105 shadow-lg shadow-indigo-500/25"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                  />
-                </svg>
                 {t("hero.downloadButton")}
               </DownloadButton>
               <Link
@@ -314,9 +303,11 @@ export default async function LandingPage() {
           </FadeIn>
 
           <FadeIn delay={400}>
-            <p className="mt-4 text-sm text-slate-500 dark:text-slate-500">
-              {t("hero.requirements")}
-            </p>
+            <PlatformRequirements
+              macosText={t("hero.requirements")}
+              windowsText={t("hero.requirementsWindows")}
+              className="mt-4 text-sm text-slate-500 dark:text-slate-500"
+            />
           </FadeIn>
         </div>
 
@@ -687,7 +678,8 @@ export default async function LandingPage() {
                 </ul>
                 <div className="mt-8">
                   <DownloadButton
-                    href={DOWNLOAD_URL}
+                    macosHref={release.macosUrl}
+                    windowsHref={release.windowsUrl}
                     version={VERSION}
                     location="home-pricing"
                     className="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-semibold transition-colors"
@@ -756,33 +748,23 @@ export default async function LandingPage() {
                 {t("cta.proButton")}
               </Link>
               <DownloadButton
-                href={DOWNLOAD_URL}
+                macosHref={release.macosUrl}
+                windowsHref={release.windowsUrl}
                 version={VERSION}
                 location="cta"
                 className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-medium transition-colors"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                  />
-                </svg>
                 {t("cta.downloadButton")}
               </DownloadButton>
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <p className="mt-6 text-sm text-slate-500">
-              v{VERSION} • {t("cta.version")}
-            </p>
+            <PlatformRequirements
+              macosText={`v${VERSION} • ${t("cta.version")}`}
+              windowsText={`v${VERSION} • ${t("cta.versionWindows")}`}
+              className="mt-6 text-sm text-slate-500"
+            />
           </FadeIn>
         </div>
       </section>

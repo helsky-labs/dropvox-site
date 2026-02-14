@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
+import { PlatformRequirementsBadge } from "@/components/ui/PlatformRequirementsBadge";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { getLocale, getTranslations } from "next-intl/server";
@@ -112,17 +113,12 @@ export default async function PricingPage() {
             </p>
           </FadeIn>
           <FadeIn delay={150}>
-            <div className="mt-6 inline-flex flex-col items-center gap-2 px-6 py-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
-              <div className="flex items-center gap-2 text-amber-800 dark:text-amber-300 font-semibold text-sm">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                {t("hero.requirementsBadge.title")}
-              </div>
-              <p className="text-xs text-amber-700 dark:text-amber-400">
-                {t("hero.requirementsBadge.detail")}
-              </p>
-            </div>
+            <PlatformRequirementsBadge
+              macosTitle={t("hero.requirementsBadge.title")}
+              macosDetail={t("hero.requirementsBadge.detail")}
+              windowsTitle={t("hero.requirementsBadgeWindows.title")}
+              windowsDetail={t("hero.requirementsBadgeWindows.detail")}
+            />
           </FadeIn>
         </div>
       </section>

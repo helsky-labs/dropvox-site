@@ -1,2 +1,5 @@
-export const CURRENT_VERSION = "1.2.4";
+export const CURRENT_VERSION = "1.3.0";
 export const DOWNLOAD_DMG = `/downloads/DropVox-${CURRENT_VERSION}.dmg`;
+export const DOWNLOAD_WIN = `/downloads/DropVox-Windows-x64-${CURRENT_VERSION}.zip`;
+export const HAS_MACOS = true;
+export const HAS_WINDOWS = true;
