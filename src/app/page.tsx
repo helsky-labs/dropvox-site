@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { DownloadButton } from "@/components/ui/DownloadButton";
+import { DownloadButton, AlsoAvailableLink } from "@/components/ui/DownloadButton";
 import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -297,7 +297,14 @@ export default async function LandingPage() {
                 {t("hero.proButton")}
               </Link>
             </div>
-            <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            <AlsoAvailableLink
+              macosHref={release.macosUrl}
+              windowsHref={release.windowsUrl}
+              version={VERSION}
+              location="hero"
+              className="mt-3 inline-block text-xs text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            />
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               {t("hero.proHint")}
             </p>
           </FadeIn>
@@ -676,16 +683,22 @@ export default async function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8">
+                <div className="mt-8 flex flex-col items-center gap-2">
                   <DownloadButton
                     macosHref={release.macosUrl}
                     windowsHref={release.windowsUrl}
                     version={VERSION}
                     location="home-pricing"
-                    className="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-semibold transition-colors"
+                    className="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 font-semibold transition-colors inline-flex items-center justify-center gap-2"
                   >
                     {t("cta.downloadButton")}
                   </DownloadButton>
+                  <AlsoAvailableLink
+                    macosHref={release.macosUrl}
+                    windowsHref={release.windowsUrl}
+                    version={VERSION}
+                    location="home-pricing"
+                  />
                 </div>
               </div>
             </FadeIn>
@@ -757,6 +770,13 @@ export default async function LandingPage() {
                 {t("cta.downloadButton")}
               </DownloadButton>
             </div>
+            <AlsoAvailableLink
+              macosHref={release.macosUrl}
+              windowsHref={release.windowsUrl}
+              version={VERSION}
+              location="cta"
+              className="mt-3 inline-block text-xs text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            />
           </FadeIn>
 
           <FadeIn delay={200}>

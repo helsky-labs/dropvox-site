@@ -38,6 +38,14 @@ function WindowsIcon({ className }: { className?: string }) {
   );
 }
 
+export function usePlatform() {
+  const [platform, setPlatform] = useState<Platform>("macos");
+  useEffect(() => {
+    setPlatform(detectPlatform());
+  }, []);
+  return platform;
+}
+
 export function DownloadButton({
   macosHref,
   windowsHref,
@@ -46,14 +54,49 @@ export function DownloadButton({
   className,
   location,
 }: DownloadButtonProps) {
-  const [platform, setPlatform] = useState<Platform>("macos");
-  const t = useTranslations();
-
-  useEffect(() => {
-    setPlatform(detectPlatform());
-  }, []);
+  const platform = usePlatform();
 
   const href = platform === "windows" ? windowsHref : macosHref;
+
+  const handleClick = () => {
+    trackEvent(ANALYTICS_EVENTS.DOWNLOAD_CLICKED, {
+      version,
+      location,
+      platform,
+      download_url: href,
+    });
+  };
+
+  return (
+    <a href={href} onClick={handleClick} className={className}>
+      {platform === "windows" ? (
+        <WindowsIcon className="w-5 h-5" />
+      ) : (
+        <AppleIcon className="w-5 h-5" />
+      )}
+      {children}
+    </a>
+  );
+}
+
+interface AlsoAvailableLinkProps {
+  macosHref: string;
+  windowsHref: string;
+  version: string;
+  location: "hero" | "cta" | "how-it-works" | "home-pricing";
+  className?: string;
+}
+
+export function AlsoAvailableLink({
+  macosHref,
+  windowsHref,
+  version,
+  location,
+  className,
+}: AlsoAvailableLinkProps) {
+  const platform = usePlatform();
+  const t = useTranslations();
+
   const otherPlatform: Platform = platform === "windows" ? "macos" : "windows";
   const otherHref = platform === "windows" ? macosHref : windowsHref;
   const otherLabel =
@@ -65,37 +108,18 @@ export function DownloadButton({
     trackEvent(ANALYTICS_EVENTS.DOWNLOAD_CLICKED, {
       version,
       location,
-      platform,
-      download_url: href,
-    });
-  };
-
-  const handleOtherClick = () => {
-    trackEvent(ANALYTICS_EVENTS.DOWNLOAD_CLICKED, {
-      version,
-      location,
       platform: otherPlatform,
       download_url: otherHref,
     });
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <a href={href} onClick={handleClick} className={className}>
-        {platform === "windows" ? (
-          <WindowsIcon className="w-5 h-5" />
-        ) : (
-          <AppleIcon className="w-5 h-5" />
-        )}
-        {children}
-      </a>
-      <a
-        href={otherHref}
-        onClick={handleOtherClick}
-        className="mt-2 text-xs text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-      >
-        {otherLabel}
-      </a>
-    </div>
+    <a
+      href={otherHref}
+      onClick={handleClick}
+      className={className ?? "text-xs text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"}
+    >
+      {otherLabel}
+    </a>
   );
 }
