@@ -5,6 +5,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { DOWNLOAD_DMG } from "@/lib/version";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { PurchaseTracker } from "@/components/ui/PurchaseTracker";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("successPage");
@@ -20,6 +21,7 @@ export default async function SuccessPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PurchaseTracker />
       <Navbar showPricing={false} showGetPro={false} />
 
       {/* Success Content */}

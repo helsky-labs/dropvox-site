@@ -4,6 +4,7 @@ import { CheckoutButton } from "@/components/ui/CheckoutButton";
 import { PlatformRequirementsBadge } from "@/components/ui/PlatformRequirementsBadge";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { PricingPageTracker } from "@/components/ui/PricingPageTracker";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
@@ -93,6 +94,7 @@ export default async function PricingPage() {
 
   return (
     <div className="min-h-screen">
+      <PricingPageTracker />
       <Navbar showPricing={false} showGetPro={false} />
 
       {/* Hero */}

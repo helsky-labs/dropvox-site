@@ -1,11 +1,16 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-export const runtime = "edge";
 export const alt = "DropVox - Transcribe Voice Messages with AI";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const iconPath = join(process.cwd(), "public", "icon.png");
+  const iconBuffer = readFileSync(iconPath);
+  const iconBase64 = `data:image/png;base64,${iconBuffer.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -21,20 +26,34 @@ export default async function Image() {
           fontFamily: "system-ui, sans-serif",
         }}
       >
+        {/* App Icon */}
+        <img
+          src={iconBase64}
+          width={140}
+          height={140}
+          style={{
+            borderRadius: 28,
+            marginBottom: 32,
+          }}
+        />
+
+        {/* App Name */}
         <div
           style={{
-            fontSize: 80,
+            fontSize: 72,
             fontWeight: 700,
             color: "white",
-            marginBottom: 16,
+            marginBottom: 12,
             display: "flex",
           }}
         >
           DropVox
         </div>
+
+        {/* Tagline */}
         <div
           style={{
-            fontSize: 32,
+            fontSize: 30,
             color: "#c7d2fe",
             textAlign: "center",
             maxWidth: 800,
@@ -43,15 +62,54 @@ export default async function Image() {
         >
           Transcribe Voice Messages with On-Device AI
         </div>
+
+        {/* Badges */}
         <div
           style={{
-            fontSize: 20,
-            color: "#a5b4fc",
-            marginTop: 24,
             display: "flex",
+            gap: 16,
+            marginTop: 32,
           }}
         >
-          macOS App &bull; Powered by Whisper &bull; 100% Private
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "8px 20px",
+              borderRadius: 100,
+              background: "rgba(255,255,255,0.12)",
+              color: "#e0e7ff",
+              fontSize: 18,
+            }}
+          >
+            macOS & Windows
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "8px 20px",
+              borderRadius: 100,
+              background: "rgba(255,255,255,0.12)",
+              color: "#e0e7ff",
+              fontSize: 18,
+            }}
+          >
+            Powered by Whisper
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "8px 20px",
+              borderRadius: 100,
+              background: "rgba(255,255,255,0.12)",
+              color: "#e0e7ff",
+              fontSize: 18,
+            }}
+          >
+            100% Private
+          </div>
         </div>
       </div>
     ),

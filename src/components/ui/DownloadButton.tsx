@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
+import { trackEvent, ANALYTICS_EVENTS, getAttributionData } from "@/lib/analytics";
 
 type Platform = "macos" | "windows";
 
@@ -64,6 +64,7 @@ export function DownloadButton({
       location,
       platform,
       download_url: href,
+      ...getAttributionData(),
     });
   };
 
@@ -110,6 +111,7 @@ export function AlsoAvailableLink({
       location,
       platform: otherPlatform,
       download_url: otherHref,
+      ...getAttributionData(),
     });
   };
 
